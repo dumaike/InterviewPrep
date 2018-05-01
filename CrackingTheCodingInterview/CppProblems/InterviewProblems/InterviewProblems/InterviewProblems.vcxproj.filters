@@ -13,24 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\com">
+      <UniqueIdentifier>{659c71fa-43a7-4df3-9a86-7697028b32f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\language">
+      <UniqueIdentifier>{ae76899e-bcde-452a-a3f1-d63da6d69919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\com">
+      <UniqueIdentifier>{dcc70841-87a7-4ff1-972d-64f4b4c05c16}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InterviewPrep.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="com\graphnode.cpp">
+      <Filter>Source Files\com</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="com\graphnode.h">
+      <Filter>Header Files\com</Filter>
+    </ClInclude>
+    <ClInclude Include="language\printklastlines.h">
+      <Filter>Source Files\language</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
