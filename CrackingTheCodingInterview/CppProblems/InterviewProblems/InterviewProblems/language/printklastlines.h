@@ -1,5 +1,5 @@
-#ifndef FOO_BAR_BAZ_H_
-#define FOO_BAR_BAZ_H_
+#ifndef LANGUAGE_PRINTLASTKLINES_H_
+#define LANGUAGE_PRINTLASTKLINES_H_
 
 #include <iostream>
 

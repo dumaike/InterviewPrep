@@ -15,13 +15,15 @@ namespace com
     int data;
     vector<GraphNode*> adjacentNodes;
 
+    GraphNode();
     GraphNode(int data);
     ~GraphNode();
 
-    void addConnection(GraphNode* node);
-    vector<GraphNode*> getConnections();
-    int getValue();
+    void addConnection(GraphNode* node); 
+    vector<GraphNode*> GraphNode::getChildren() const;
+    int getValue() const;
     int numConnections();
+    bool operator==(const GraphNode &node);
 
   };
 }

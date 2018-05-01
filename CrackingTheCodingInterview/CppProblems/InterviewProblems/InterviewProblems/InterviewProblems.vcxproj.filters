@@ -22,13 +22,16 @@
     <Filter Include="Header Files\com">
       <UniqueIdentifier>{dcc70841-87a7-4ff1-972d-64f4b4c05c16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\graphsandtrees">
+      <UniqueIdentifier>{e9cd5b74-b3d0-4b1b-9861-4b4df7dd8ec8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="com\graphnode.cpp">
       <Filter>Source Files\com</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="language\printklastlines.h">
       <Filter>Source Files\language</Filter>
+    </ClInclude>
+    <ClInclude Include="graphsandtrees\routebetweennodes.h">
+      <Filter>Source Files\graphsandtrees</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
