@@ -17,13 +17,13 @@ GraphNode::GraphNode(int nodeData) {
 GraphNode::~GraphNode() {
 }
 
-void GraphNode::addConnection(GraphNode* node) {
-  adjacentNodes.push_back(node);
+void GraphNode::addChild(GraphNode* node) {
+  childNodes.push_back(node);
 }
 
 //In production this should be a pair of function begin and end iterators
 vector<GraphNode*> GraphNode::getChildren() const {
-  return adjacentNodes;
+  return childNodes;
 }
 
 int GraphNode::getValue() const {
@@ -31,7 +31,7 @@ int GraphNode::getValue() const {
 }
 
 int GraphNode::numConnections() {
-  return adjacentNodes.size();
+  return childNodes.size();
 }
 
 bool GraphNode::operator==(const GraphNode &node)

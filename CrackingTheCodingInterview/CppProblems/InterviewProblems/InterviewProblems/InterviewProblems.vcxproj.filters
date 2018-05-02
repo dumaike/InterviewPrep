@@ -25,27 +25,42 @@
     <Filter Include="Source Files\graphsandtrees">
       <UniqueIdentifier>{e9cd5b74-b3d0-4b1b-9861-4b4df7dd8ec8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\graphsandtrees">
+      <UniqueIdentifier>{7979e84d-2ca7-45cd-b768-b3d560e07303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\language">
+      <UniqueIdentifier>{9a0ea886-c3a2-454e-a51b-785ec6a6b535}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="com\graphnode.cpp">
-      <Filter>Source Files\com</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="graphnode.cpp">
+      <Filter>Source Files\com</Filter>
+    </ClCompile>
+    <ClCompile Include="testableproblem.cpp">
+      <Filter>Source Files\com</Filter>
+    </ClCompile>
+    <ClCompile Include="routebetweennodes .cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="com\graphnode.h">
+    <ClInclude Include="examplegraphs.h">
+      <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="graphnode.h">
       <Filter>Header Files\com</Filter>
     </ClInclude>
-    <ClInclude Include="language\printklastlines.h">
-      <Filter>Source Files\language</Filter>
+    <ClInclude Include="testableproblem.h">
+      <Filter>Header Files\com</Filter>
     </ClInclude>
-    <ClInclude Include="graphsandtrees\routebetweennodes.h">
-      <Filter>Source Files\graphsandtrees</Filter>
+    <ClInclude Include="printklastlines.h">
+      <Filter>Header Files\language</Filter>
     </ClInclude>
-    <ClInclude Include="graphsandtrees\examplegraphs.h">
-      <Filter>Source Files\graphsandtrees</Filter>
+    <ClInclude Include="routebetweennodes.h">
+      <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

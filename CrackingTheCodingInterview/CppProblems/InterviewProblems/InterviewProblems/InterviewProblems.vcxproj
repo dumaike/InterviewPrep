@@ -19,14 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="com\graphnode.cpp" />
+    <ClCompile Include="graphnode.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="routebetweennodes .cpp" />
+    <ClCompile Include="testableproblem.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="com\graphnode.h" />
-    <ClInclude Include="graphsandtrees\examplegraphs.h" />
-    <ClInclude Include="graphsandtrees\routebetweennodes.h" />
-    <ClInclude Include="language\printklastlines.h" />
+    <ClInclude Include="examplegraphs.h" />
+    <ClInclude Include="graphnode.h" />
+    <ClInclude Include="printklastlines.h" />
+    <ClInclude Include="routebetweennodes.h" />
+    <ClInclude Include="testableproblem.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FB9A882E-ECB5-48E3-9ADB-58093AE45BD4}</ProjectGuid>

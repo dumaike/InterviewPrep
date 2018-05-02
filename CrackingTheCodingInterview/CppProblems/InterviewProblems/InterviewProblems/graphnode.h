@@ -13,13 +13,13 @@ namespace com
 
   public:
     int data;
-    vector<GraphNode*> adjacentNodes;
+    vector<GraphNode*> childNodes;
 
     GraphNode();
     GraphNode(int data);
     ~GraphNode();
 
-    void addConnection(GraphNode* node); 
+    void addChild(GraphNode* node); 
     vector<GraphNode*> GraphNode::getChildren() const;
     int getValue() const;
     int numConnections();

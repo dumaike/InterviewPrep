@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include "com/graphnode.h"
+#include "graphnode.h"
 
 using namespace std;
 

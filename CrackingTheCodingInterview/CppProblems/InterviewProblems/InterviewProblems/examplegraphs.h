@@ -5,7 +5,7 @@
 #include <unordered_set>
 #include <queue>
 
-#include "com/graphnode.h"
+#include "graphnode.h"
 
 using namespace std;
 using namespace com;
@@ -23,12 +23,12 @@ namespace graphsandtrees {
       GraphNode(0), GraphNode(1), GraphNode(2), GraphNode(3), GraphNode(4), GraphNode(5)
     });
 
-    returnNodes[0].addConnection(&returnNodes[1]);
-    returnNodes[0].addConnection(&returnNodes[3]);
-    returnNodes[1].addConnection(&returnNodes[2]);
-    returnNodes[3].addConnection(&returnNodes[4]);
-    returnNodes[4].addConnection(&returnNodes[5]);
-    returnNodes[4].addConnection(&returnNodes[1]);
+    returnNodes[0].addChild(&returnNodes[1]);
+    returnNodes[0].addChild(&returnNodes[3]);
+    returnNodes[1].addChild(&returnNodes[2]);
+    returnNodes[3].addChild(&returnNodes[4]);
+    returnNodes[4].addChild(&returnNodes[5]);
+    returnNodes[4].addChild(&returnNodes[1]);
 
     return returnNodes;
   }
