@@ -24,6 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="com\graphnode.h" />
+    <ClInclude Include="graphsandtrees\examplegraphs.h" />
     <ClInclude Include="graphsandtrees\routebetweennodes.h" />
     <ClInclude Include="language\printklastlines.h" />
   </ItemGroup>

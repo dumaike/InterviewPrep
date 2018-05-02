@@ -44,5 +44,8 @@
     <ClInclude Include="graphsandtrees\routebetweennodes.h">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClInclude>
+    <ClInclude Include="graphsandtrees\examplegraphs.h">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

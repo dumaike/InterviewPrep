@@ -10,62 +10,79 @@
 using namespace std;
 using namespace com;
 
-namespace graphsandtrees {
-  
-  GraphNode n1 = GraphNode(1);
-  GraphNode n2 = GraphNode(2);
-  GraphNode n3 = GraphNode(3);
-  GraphNode n4 = GraphNode(4);
-  GraphNode n5 = GraphNode(5);
-  GraphNode n6 = GraphNode(6);
-  GraphNode n7 = GraphNode(7);
-  
-  bool routeBetweenNodes(GraphNode fNode, GraphNode sNode) {
-    unordered_set<GraphNode, GraphNode> fNodesVisited = unordered_set<GraphNode, GraphNode>();
-    unordered_set<GraphNode, GraphNode> sNodesVisited = unordered_set<GraphNode, GraphNode>();
+//An solution to a problem from Cracking The Coding Interview, transcribed directly
+//from my whiteboard solution. Uses some techniques for time saving that I wouldn't
+//use in a production environment, for the sake of time savings and brevity.
+
+namespace graphsandtrees{
+
+  //Some forward declarations that we wouldn't use in production
+  void addChildrenOfNodeToQueue(const GraphNode &node, queue<GraphNode> &visitQueue,
+                                unordered_set<int> &visitedQueue);
+  bool isVisitingNodeAMatch(queue<GraphNode> &visitQueue, const GraphNode &goalNode,
+                            unordered_set<int> &visitedQueue);
+  bool routeBetweenNodes(const GraphNode &fNode, const GraphNode &sNode);
+
+  bool routeBetweenNodes(const GraphNode &fNode, const GraphNode &sNode) {
+    unordered_set<int> fNodesVisited = unordered_set<int>();
+    unordered_set<int> sNodesVisited = unordered_set<int>();
 
     queue<GraphNode> fToVisit = queue<GraphNode>();
     queue<GraphNode> sToVisit = queue<GraphNode>();
 
     //Check for first generation children of f that could be s
-    vector<GraphNode*> fChildren = fNode.getChildren();
-    for (GraphNode* node : fChildren) {      
-      fToVisit.push(*node);
-    }
+    addChildrenOfNodeToQueue(fNode, fToVisit, fNodesVisited);
 
     //Check for first generation children of s that could be f
-    vector<GraphNode*> sChildren = sNode.getChildren();
-    for (GraphNode* node : sChildren) {
-      sToVisit.push(*node);
-    }
+    addChildrenOfNodeToQueue(sNode, sToVisit, sNodesVisited);
 
-    //Look through all the nodes in our bi-directional BFS left
-    //to visit
+    //Look through all the nodes left to visit in our search
     while (fToVisit.size() > 0 || sToVisit.size() > 0){
-      //If we have a node to visit from f, check that one
-      if (fToVisit.size() > 0){
-        GraphNode visitingNode = fToVisit.back();
-
-        //If it's s, and we're done
-        if (visitingNode == sNode){
-          return true;
-        }
-
-        //Otherwise 
-        fToVisit.pop();
+      if (isVisitingNodeAMatch(fToVisit, sNode, fNodesVisited)){
+        return true;
       }
 
+      if (isVisitingNodeAMatch(sToVisit, fNode, sNodesVisited)){
+        return true;
+      }
     }
 
     return false;
   }
 
-  void addChildrenOfNodeToQueue(GraphNode &node, queue<GraphNode> &visitQueue)
-  {
+  void addChildrenOfNodeToQueue(const GraphNode &node, queue<GraphNode> &toVisitQueue,
+                                unordered_set<int> &visitedQueue){
+    
     const vector<GraphNode*> children = node.getChildren();
     for (GraphNode* node : children) {
-      visitQueue.push(*node);
+      unordered_set<int>::const_iterator got = visitedQueue.find(node->getValue());
+
+      //If we haven't visited this node already, plan to visit it
+      if (got == visitedQueue.end()){
+        toVisitQueue.push(*node);
+        visitedQueue.insert(node->getValue());
+      }
     }
+  }
+
+  bool isVisitingNodeAMatch(queue<GraphNode> &toVisitQueue, const GraphNode &goalNode,
+                            unordered_set<int> &visitedQueue) {
+    //If we have a node to visit from f, check that one
+    if (toVisitQueue.size() > 0) {
+      GraphNode visitingNode = toVisitQueue.back();
+
+      //If it's s, and we're done
+      if (visitingNode == goalNode) {
+        return true;
+      }
+
+      //Otherwise 
+      toVisitQueue.pop();
+
+      addChildrenOfNodeToQueue(visitingNode, toVisitQueue, visitedQueue);
+    }
+
+    return false;
   }
 
 }

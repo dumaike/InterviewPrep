@@ -36,7 +36,9 @@ int GraphNode::numConnections() {
 
 bool GraphNode::operator==(const GraphNode &node)
 {
-  return this == &node;
+  //We're assuming, for all these example problems, that there are no duplicate nodes
+  //in a graph with the same value to avoid the exercises becoming about refernece
+  return this->getValue() == node.getValue();
 }
 
 // custom specialization of std::hash can be injected in namespace std
