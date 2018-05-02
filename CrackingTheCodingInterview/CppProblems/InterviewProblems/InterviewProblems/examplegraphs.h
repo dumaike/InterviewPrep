@@ -10,7 +10,7 @@
 using namespace std;
 using namespace com;
 
-//An example set of 
+//An example set of graphs for use in testing problems
 namespace graphsandtrees {
   
   /* Creates and returns this graph

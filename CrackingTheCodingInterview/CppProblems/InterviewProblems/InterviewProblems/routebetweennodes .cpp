@@ -1,5 +1,8 @@
 #include "routebetweennodes.h"
 
+#include <iostream>
+#include <string>
+
 #include "examplegraphs.h"
 
 using namespace graphsandtrees;
@@ -21,10 +24,18 @@ void RouteBetweenNodes::singleTest(
     int rightNodeIndex, bool expectedResult)
 {
   bool isRoute = routeBetweenNodes(graph[leftNodeIndex], graph[rightNodeIndex]);
+  string routeAsString = isRoute ? "true" : "false";
+  string testPassedAsString = isRoute == expectedResult ? "Test Passed" : "Test Failed";
+
   cout << "Route between Node " << leftNodeIndex << " and Node " << rightNodeIndex <<
-    ": " << (isRoute ? "true" : "false") << " - " << 
-    (isRoute == expectedResult ? "Test Passed" : "Test Failed") << endl;
+    ": " << routeAsString << " - " << testPassedAsString << endl;
 }
+
+//*-----------------------------------------------------------------------------------------*/
+// The below code is a solution to a problem from Cracking The Coding Interview, transcribed as
+// closely as possible from from my whiteboard solution. Uses some techniques for the sake of time
+// savings and brevity that I wouldn't endorse in a production environment.
+//*-----------------------------------------------------------------------------------------*/
 
 bool RouteBetweenNodes::routeBetweenNodes(const GraphNode &fNode, const GraphNode &sNode) {
   unordered_set<int> fNodesVisited = unordered_set<int>();
