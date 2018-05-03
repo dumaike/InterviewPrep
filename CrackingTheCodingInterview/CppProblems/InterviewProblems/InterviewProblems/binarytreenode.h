@@ -1,16 +1,19 @@
 #ifndef COM_BINARYTREENODE_H_
 #define COM_BINARYTREENODE_H_
 
+#include <iostream>
+#include <string>
+
 //-----------------------------------------------------------------------------
 
 namespace com
 {
   class BinaryTreeNode {
-
-  public:
     int data;
     BinaryTreeNode* leftChild;
     BinaryTreeNode* rightChild;
+
+  public:
 
     BinaryTreeNode();
     BinaryTreeNode(int data);
@@ -18,10 +21,16 @@ namespace com
 
     void setLeftChild(BinaryTreeNode* node);
     void setRightChild(BinaryTreeNode* node);
-    BinaryTreeNode* getLeftChild();
-    BinaryTreeNode* getRightChild();
+    BinaryTreeNode* getLeftChild() const;
+    BinaryTreeNode* getRightChild() const;
     int getValue() const;
-    bool operator==(const BinaryTreeNode &node);
+    int getHeight() const;
+    bool operator==(const BinaryTreeNode &node) const;
+    std::string toString() const;
+
+  private:
+
+    std::string spacesPerTreeDepth(int depth, int height) const;
 
   };
 }

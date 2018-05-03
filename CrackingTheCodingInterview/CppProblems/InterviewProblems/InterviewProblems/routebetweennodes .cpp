@@ -9,7 +9,7 @@ using namespace graphsandtrees;
 
 void RouteBetweenNodes::runTestCases()
 {
-  vector<GraphNode> sampleGraph = createGraph1();
+  vector<GraphNode> sampleGraph = ExampleDataStructures::createGraph1();
 
   singleTest(sampleGraph, 1, 5, false);
   singleTest(sampleGraph, 1, 3, true);

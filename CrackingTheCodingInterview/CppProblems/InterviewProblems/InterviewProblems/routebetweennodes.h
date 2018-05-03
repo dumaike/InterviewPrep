@@ -10,6 +10,7 @@
 using namespace com;
 
 namespace graphsandtrees{
+
   //Chapter 4 Question 1
   class RouteBetweenNodes : public TestableProblem {
 
@@ -26,7 +27,7 @@ namespace graphsandtrees{
 
     public:
 
-      void RouteBetweenNodes::runTestCases();
+      void runTestCases();
   };
 }
 

@@ -20,8 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="binarytreenode.cpp" />
+    <ClCompile Include="examplegraphs.cpp" />
     <ClCompile Include="graphnode.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="minimaltree.cpp" />
     <ClCompile Include="routebetweennodes .cpp" />
     <ClCompile Include="testableproblem.cpp" />
   </ItemGroup>
@@ -29,6 +31,7 @@
     <ClInclude Include="binarytreenode.h" />
     <ClInclude Include="examplegraphs.h" />
     <ClInclude Include="graphnode.h" />
+    <ClInclude Include="minimaltree.h" />
     <ClInclude Include="printklastlines.h" />
     <ClInclude Include="routebetweennodes.h" />
     <ClInclude Include="testableproblem.h" />

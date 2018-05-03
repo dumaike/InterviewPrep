@@ -48,6 +48,12 @@
     <ClCompile Include="binarytreenode.cpp">
       <Filter>Source Files\com</Filter>
     </ClCompile>
+    <ClCompile Include="minimaltree.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
+    <ClCompile Include="examplegraphs.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="examplegraphs.h">
@@ -67,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="binarytreenode.h">
       <Filter>Header Files\com</Filter>
+    </ClInclude>
+    <ClInclude Include="minimaltree.h">
+      <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
