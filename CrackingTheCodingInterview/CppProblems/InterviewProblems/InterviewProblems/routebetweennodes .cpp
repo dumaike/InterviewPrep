@@ -32,9 +32,10 @@ void RouteBetweenNodes::singleTest(
 }
 
 //*-----------------------------------------------------------------------------------------*/
-// The below code is a solution to a problem from Cracking The Coding Interview, transcribed as
-// closely as possible from from my whiteboard solution. Uses some techniques for the sake of time
-// savings and brevity that I wouldn't endorse in a production environment.
+// The below code is a solution to a problem from Cracking The Coding Interview
+// Chapter 4 Question 1 transcribed as closely as possible from from my whiteboard solution. 
+// Uses some techniques for the sake of time savings and brevity that I wouldn't endorse in 
+// a production environment.
 //*-----------------------------------------------------------------------------------------*/
 
 bool RouteBetweenNodes::routeBetweenNodes(const GraphNode &fNode, const GraphNode &sNode) {
