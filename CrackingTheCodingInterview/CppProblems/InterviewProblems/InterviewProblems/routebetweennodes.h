@@ -7,9 +7,6 @@
 #include "graphnode.h"
 #include "testableproblem.h"
 
-//An solution to a problem from Cracking The Coding Interview, transcribed directly
-//from my whiteboard solution. Uses some techniques for time saving that I wouldn't
-//use in a production environment, for the sake of time savings and brevity.
 using namespace com;
 
 namespace graphsandtrees{

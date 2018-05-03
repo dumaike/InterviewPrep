@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="binarytreenode.cpp" />
     <ClCompile Include="graphnode.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="routebetweennodes .cpp" />
     <ClCompile Include="testableproblem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binarytreenode.h" />
     <ClInclude Include="examplegraphs.h" />
     <ClInclude Include="graphnode.h" />
     <ClInclude Include="printklastlines.h" />

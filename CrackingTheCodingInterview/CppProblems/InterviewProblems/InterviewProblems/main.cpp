@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "graphnode.h"
 #include "printklastlines.h"
 #include "routebetweennodes.h"
 

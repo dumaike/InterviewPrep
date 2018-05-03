@@ -45,6 +45,9 @@
     <ClCompile Include="routebetweennodes .cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
+    <ClCompile Include="binarytreenode.cpp">
+      <Filter>Source Files\com</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="examplegraphs.h">
@@ -61,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="routebetweennodes.h">
       <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="binarytreenode.h">
+      <Filter>Header Files\com</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

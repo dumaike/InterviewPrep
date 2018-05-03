@@ -1,5 +1,5 @@
-#ifndef INTERVIEWPREP_DATASTRUCTURES_GRAPHNODE_H
-#define INTERVIEWPREP_DATASTRUCTURES_GRAPHNODE_H
+#ifndef COM_GRAPHNODE_H_
+#define COM_GRAPHNODE_H_
 
 //-----------------------------------------------------------------------------
 
