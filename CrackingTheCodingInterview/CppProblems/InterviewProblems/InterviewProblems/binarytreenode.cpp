@@ -2,6 +2,7 @@
 
 #include <queue>
 #include <cmath>
+#include <list>
 
 using namespace com;
 using namespace std;
@@ -51,55 +52,51 @@ int BinaryTreeNode::getHeight() const{
   return rightHeight;
 }
 
-string BinaryTreeNode::toString() const {
-  int height = getHeight();
+//Algorithm adapted from: https://stackoverflow.com/questions/801740/c-how-to-draw-a-binary-tree-to-the-console
+string BinaryTreeNode::toString(BinaryTreeNode* root) {
+  int depth = root->getHeight();
 
-  queue<BinaryTreeNode*> nodesToPrintThisLevel = queue<BinaryTreeNode*>();
-  queue<BinaryTreeNode*> nodesToPrintNextLevel = queue<BinaryTreeNode*>();
+  char buf[1024];
+  int last_lvl = 0;
+  int offset = (1 << depth) - 1;
 
-  if (this->getLeftChild() != NULL) {
-    nodesToPrintThisLevel.push(this->getLeftChild());
-  }
-  if (this->getRightChild() != NULL) {
-    nodesToPrintThisLevel.push(this->getRightChild());
-  }
+  // using a queue means we perform a breadth first iteration through the tree
+  std::list<NodeDepth> q;
 
-  string returnString = spacesPerTreeDepth(0, height) + to_string(getValue()) + "\n";
+  q.push_back(NodeDepth(root, last_lvl));
 
-  int depth = 1;
-  string spaces = spacesPerTreeDepth(1, height);
-  while (!nodesToPrintThisLevel.empty()) {
-    const BinaryTreeNode* curNode = nodesToPrintThisLevel.front();
-    nodesToPrintThisLevel.pop();
-    returnString += spaces + to_string(curNode->getValue());
-
-    if (curNode->getLeftChild() != NULL) {
-      nodesToPrintNextLevel.push(curNode->getLeftChild());
-    }
-    if (curNode->getRightChild() != NULL) {
-      nodesToPrintNextLevel.push(curNode->getRightChild());
-    }
-
-    if (nodesToPrintThisLevel.empty() && !nodesToPrintNextLevel.empty()){
-      nodesToPrintThisLevel = move(nodesToPrintNextLevel);
-      nodesToPrintNextLevel = queue<BinaryTreeNode*>();
-      returnString += "\n";
-      depth++;
-      spaces = spacesPerTreeDepth(depth, height);
-    }
-  }
-
-  return returnString;
-}
-
-string BinaryTreeNode::spacesPerTreeDepth(int depth, int height) const {
   string returnString = "";
 
-  int numSpaces = pow(2, height - depth - 1);
-  for (int i = 0; i < numSpaces; ++i)
+  while (q.size())
   {
-    returnString += " ";
+    const NodeDepth& nd = *q.begin();
+
+    // moving to a new level in the tree, output a new line and calculate new offset
+    if (last_lvl != nd.lvl)
+    {
+      returnString += "\n";
+
+      last_lvl = nd.lvl;
+      offset = (1 << (depth - nd.lvl)) - 1;
+    }
+
+    // output <offset><data><offset>
+    string strBuffer = "";
+    if (nd.n) 
+    sprintf_s(buf, " %*s%d%*s", offset, " ", nd.n->data, offset, " ");
+    else
+    sprintf_s(buf, " %*s", offset << 1, " ");
+    returnString += buf;
+
+    if (nd.n)
+    {
+      q.push_back(NodeDepth(nd.n->getLeftChild(), last_lvl + 1));
+      q.push_back(NodeDepth(nd.n->getRightChild(), last_lvl + 1));
+    }
+
+    q.pop_front();
   }
+  returnString += "\n";
 
   return returnString;
 }

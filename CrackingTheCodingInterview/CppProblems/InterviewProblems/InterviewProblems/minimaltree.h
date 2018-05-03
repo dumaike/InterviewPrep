@@ -14,6 +14,8 @@ namespace graphsandtrees{
 
     BinaryTreeNode* makeTreeHelper(const vector<int> &values, int left, int right);
 
+    void singleTest(const vector<int> &inputVector);
+
     public:
 
       void runTestCases();

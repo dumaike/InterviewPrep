@@ -9,6 +9,15 @@
 namespace com
 {
   class BinaryTreeNode {
+
+    //A class to help print out trees in the console
+    struct NodeDepth
+    {
+      BinaryTreeNode* n;
+      int lvl;
+      NodeDepth(BinaryTreeNode* n_, int lvl_) : n(n_), lvl(lvl_) {}
+    };
+
     int data;
     BinaryTreeNode* leftChild;
     BinaryTreeNode* rightChild;
@@ -26,7 +35,7 @@ namespace com
     int getValue() const;
     int getHeight() const;
     bool operator==(const BinaryTreeNode &node) const;
-    std::string toString() const;
+    std::string static toString(BinaryTreeNode* root);
 
   private:
 

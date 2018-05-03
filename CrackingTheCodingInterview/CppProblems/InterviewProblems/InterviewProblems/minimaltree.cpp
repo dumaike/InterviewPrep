@@ -9,10 +9,16 @@ using namespace graphsandtrees;
 
 void MinimalTree::runTestCases()
 {
-  vector<int> test1 = {0, 1, 2, 3,4,5,6,7,8,9};
-  cout << "Vector: " << ExampleDataStructures::printIntVector(test1) << " becomes:" << endl;
-  BinaryTreeNode root = minimalTree(test1);
-  cout << root.toString() << endl;
+  singleTest(vector<int>{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15});
+  singleTest(vector<int>{0});
+  singleTest(vector<int>{0,0,0,0,0});
+  singleTest(vector<int>{0,1,1,2});
+}
+
+void MinimalTree::singleTest(const vector<int> &inputVector) {
+  cout << "Vector: " << ExampleDataStructures::printIntVector(inputVector) << " becomes:" << endl;
+  BinaryTreeNode root = minimalTree(inputVector);
+  cout << root.toString(&root) << endl;
 }
 
 //*-----------------------------------------------------------------------------------------*/
@@ -34,7 +40,7 @@ BinaryTreeNode MinimalTree::minimalTree(const vector<int> &values) {
   if (middle - 1 >= 0) {
     root.setLeftChild(makeTreeHelper(values, 0, middle - 1));
   }
-  if (middle + 1 <= values.size()) {
+  if (middle + 1 < values.size()) {
     root.setRightChild(makeTreeHelper(values, middle + 1, values.size() - 1));
   }
 
