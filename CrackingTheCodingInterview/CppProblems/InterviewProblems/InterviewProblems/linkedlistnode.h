@@ -1,5 +1,5 @@
-#ifndef COM_GRAPHNODE_H_
-#define COM_GRAPHNODE_H_
+#ifndef COM_LINKEDLISTNODE_H_
+#define COM_LINKEDLISTNODE_H_
 
 //-----------------------------------------------------------------------------
 
@@ -13,22 +13,22 @@ using namespace std;
 //editing as possible
 //*-----------------------------------------------------------------------------------------*/
 namespace com {
-  namespace graph {
+  namespace linkedlist {
     class Node {
 
-      int data;
-      vector<Node*> childNodes;
+      int data = 0;
+      Node* next = NULL;
 
     public:
 
       Node();
       Node(int data);
+      Node(int data, Node* nextNode);
       ~Node();
 
-      void addChild(Node* node);
-      vector<Node*> getChildren() const;
+      void setNext(Node* node);
+      Node* getNext() const;
       int getValue() const;
-      int numChildren();
       bool operator==(const Node &node);
 
     };

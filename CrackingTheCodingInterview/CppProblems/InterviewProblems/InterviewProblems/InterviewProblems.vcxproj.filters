@@ -37,6 +37,18 @@
     <Filter Include="Source Files\com\graph">
       <UniqueIdentifier>{80731ad7-e031-4c55-845c-2503f220fd2b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\com\binarytree">
+      <UniqueIdentifier>{60c08049-65fe-4535-bfbe-5bdbc3e1e67d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\com\binaytree">
+      <UniqueIdentifier>{09094391-8afe-40b4-b616-e8fa3bedd3c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\com\linkedlist">
+      <UniqueIdentifier>{42cac496-c019-41fb-b439-ebaffe0f92e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\com\linkedlist">
+      <UniqueIdentifier>{4b0ff36d-244b-4717-ab44-eb06fbc78678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,23 +60,26 @@
     <ClCompile Include="routebetweennodes .cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
-    <ClCompile Include="binarytreenode.cpp">
-      <Filter>Source Files\com</Filter>
-    </ClCompile>
     <ClCompile Include="minimaltree.cpp">
-      <Filter>Source Files\graphsandtrees</Filter>
-    </ClCompile>
-    <ClCompile Include="examplegraphs.cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
     <ClCompile Include="graphnode.cpp">
       <Filter>Source Files\com\graph</Filter>
     </ClCompile>
+    <ClCompile Include="listofdepths.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
+    <ClCompile Include="datastructureutils.cpp">
+      <Filter>Source Files\com</Filter>
+    </ClCompile>
+    <ClCompile Include="binarytreenode.cpp">
+      <Filter>Source Files\com\binaytree</Filter>
+    </ClCompile>
+    <ClCompile Include="linkedlistnode.cpp">
+      <Filter>Source Files\com\linkedlist</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="examplegraphs.h">
-      <Filter>Header Files\graphsandtrees</Filter>
-    </ClInclude>
     <ClInclude Include="testableproblem.h">
       <Filter>Header Files\com</Filter>
     </ClInclude>
@@ -74,14 +89,23 @@
     <ClInclude Include="routebetweennodes.h">
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
-    <ClInclude Include="binarytreenode.h">
-      <Filter>Header Files\com</Filter>
-    </ClInclude>
     <ClInclude Include="minimaltree.h">
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
     <ClInclude Include="graphnode.h">
       <Filter>Header Files\com\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="listofdepths.h">
+      <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="datastructureutils.h">
+      <Filter>Header Files\com</Filter>
+    </ClInclude>
+    <ClInclude Include="binarytreenode.h">
+      <Filter>Header Files\com\binarytree</Filter>
+    </ClInclude>
+    <ClInclude Include="linkedlistnode.h">
+      <Filter>Header Files\com\linkedlist</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "examplegraphs.h"
+#include "datastructureutils.h"
 
 using namespace graphsandtrees;
 using namespace com;
@@ -18,13 +18,13 @@ void MinimalTree::runTestCases()
 }
 
 void MinimalTree::singleTest(const vector<int> &inputVector) {
-  cout << "Vector: " << ExampleDataStructures::printIntVector(inputVector) << " becomes:" << endl;
+  cout << "Vector: " << DataStructureUtils::printIntVector(inputVector) << " becomes:" << endl;
   Node root = minimalTree(inputVector);
-  cout << root.toString(&root) << endl;
+  cout << Node::toString(&root) << endl;
 }
 
 //*-----------------------------------------------------------------------------------------*/
-// The below code is a solution to a problem from Cracking The Coding Interview
+// The below code is a solution to a problem from Cracking The Coding Interview 6th Edition
 // Chapter 4 Question 2 transcribed as closely as possible from from my whiteboard solution. 
 // Uses some techniques for the sake of time savings and brevity that I wouldn't endorse in 
 // a production environment.

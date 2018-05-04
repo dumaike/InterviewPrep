@@ -1,34 +1,37 @@
-#include "graphnode.h"
+#include "linkedlistnode.h"
 
-using namespace com::graph;
+using namespace com::linkedlist;
 using namespace std;
 
 Node::Node() {
   data = 0;
+  next = NULL;
 }
 
 Node::Node(int nodeData) {
   data = nodeData;
+  next = NULL;
+}
+
+Node::Node(int nodeData, Node* nextNode) {
+  data = nodeData;
+  next = nextNode;
 }
 
 Node::~Node() {
 }
 
-void Node::addChild(Node* node) {
-  childNodes.push_back(node);
+void Node::setNext(Node* node) {
+  next = node;
 }
 
 //In production this should be a pair of function begin and end iterators
-vector<Node*> Node::getChildren() const {
-  return childNodes;
+Node* Node::getNext() const {
+  return next;
 }
 
 int Node::getValue() const {
   return data;
-}
-
-int Node::numChildren() {
-  return childNodes.size();
 }
 
 bool Node::operator==(const Node &node)
