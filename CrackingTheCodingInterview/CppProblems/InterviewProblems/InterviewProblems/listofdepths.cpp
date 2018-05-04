@@ -5,8 +5,8 @@
 #include <vector>
 #include <stack>
 
-#include "binarytreenode.h";
-#include "linkedlistnode.h";
+#include "binarytreenode.h"
+#include "linkedlistnode.h"
 #include "datastructureutils.h"
 
 using namespace com;
@@ -22,9 +22,9 @@ void ListOfDepths::runTestCases()
 
 void ListOfDepths::singleTest(binarytree::Node* root)
 {
-  cout << "Binary tree: " << endl << binarytree::Node::toString(root) << "becomes: " << endl;
+  cout << "Binary tree: " << endl << DataStructureUtils::toString(root) << "becomes: " << endl;
   vector<linkedlist::Node*> nodeLists = listOfDepths(root);
-  for (int i = 0; i < nodeLists.size(); ++i) {
+  for (unsigned int i = 0; i < nodeLists.size(); ++i) {
     linkedlist::Node* cur = nodeLists[i];
     cout << i << ": ";
     while (cur != NULL) {
@@ -66,7 +66,7 @@ vector<linkedlist::Node*> ListOfDepths::listOfDepths(binarytree::Node* root) {
     thisDepth.push(root->getRightChild());
   }
 
-  int depth = 1;
+  unsigned int depth = 1;
 
   returnList.push_back(new linkedlist::Node(root->getValue()));
   

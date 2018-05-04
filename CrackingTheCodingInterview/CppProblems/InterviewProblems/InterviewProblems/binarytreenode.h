@@ -13,14 +13,6 @@ namespace com {
   namespace binarytree {
     class Node {
 
-      //A class to help print out trees in the console
-      struct NodeDepth
-      {
-        Node* n;
-        int lvl;
-        NodeDepth(Node* n_, int lvl_) : n(n_), lvl(lvl_) {}
-      };
-
       int data;
       Node* leftChild;
       Node* rightChild;

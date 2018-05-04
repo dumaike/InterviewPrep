@@ -18,9 +18,9 @@ void MinimalTree::runTestCases()
 }
 
 void MinimalTree::singleTest(const vector<int> &inputVector) {
-  cout << "Vector: " << DataStructureUtils::printIntVector(inputVector) << " becomes:" << endl;
+  cout << "Vector: " << DataStructureUtils::toString(inputVector) << " becomes:" << endl;
   Node root = minimalTree(inputVector);
-  cout << Node::toString(&root) << endl;
+  cout << DataStructureUtils::toString(&root) << endl;
 }
 
 //*-----------------------------------------------------------------------------------------*/
@@ -36,7 +36,7 @@ Node MinimalTree::minimalTree(const vector<int> &values) {
     return NULL;
   }
 
-  int middle = values.size() / 2;
+  unsigned int middle = values.size() / 2;
   Node root = Node(values[middle]);
 
   if (middle - 1 >= 0) {

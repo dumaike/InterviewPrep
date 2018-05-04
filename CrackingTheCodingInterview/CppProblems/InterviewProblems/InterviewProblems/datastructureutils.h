@@ -14,6 +14,14 @@ using namespace std;
 //An example set of data structures to use in testing problems
 namespace com {
   class DataStructureUtils {
+      //A class to help print out trees in the console
+      struct NodeDepth
+      {
+        binarytree::Node* n;
+        int lvl;
+        NodeDepth(binarytree::Node* n_, int lvl_) : n(n_), lvl(lvl_) {}
+      };
+
     public:
 
       /* Creates and returns this graph
@@ -46,7 +54,8 @@ namespace com {
       */
       static com::binarytree::Node* createTree3();
 
-      static string printIntVector(const vector<int> &values);
+      static string toString(const vector<int> &values);
+      static string toString(binarytree::Node* root);
   };
 }
 
