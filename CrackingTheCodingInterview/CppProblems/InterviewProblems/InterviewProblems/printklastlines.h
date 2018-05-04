@@ -11,7 +11,7 @@ namespace language {
 
   void printTLastKLines(){
 
-    com::GraphNode node = com::GraphNode(5);
+    com::graph::Node node = com::graph::Node(5);
 
     cout << "test of lines";
   }

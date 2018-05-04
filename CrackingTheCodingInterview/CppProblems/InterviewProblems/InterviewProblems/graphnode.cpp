@@ -1,37 +1,37 @@
 #include "graphnode.h"
 
-using namespace com;
+using namespace com::graph;
 using namespace std;
 
-GraphNode::GraphNode() {
+Node::Node() {
   data = 0;
 }
 
-GraphNode::GraphNode(int nodeData) {
+Node::Node(int nodeData) {
   data = nodeData;
 }
 
-GraphNode::~GraphNode() {
+Node::~Node() {
 }
 
-void GraphNode::addChild(GraphNode* node) {
+void Node::addChild(Node* node) {
   childNodes.push_back(node);
 }
 
 //In production this should be a pair of function begin and end iterators
-vector<GraphNode*> GraphNode::getChildren() const {
+vector<Node*> Node::getChildren() const {
   return childNodes;
 }
 
-int GraphNode::getValue() const {
+int Node::getValue() const {
   return data;
 }
 
-int GraphNode::numConnections() {
+int Node::numConnections() {
   return childNodes.size();
 }
 
-bool GraphNode::operator==(const GraphNode &node)
+bool Node::operator==(const Node &node)
 {
   //We're assuming, for all these example problems, that there are no duplicate nodes
   //in a graph with the same value to avoid the exercises becoming about refernece

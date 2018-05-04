@@ -8,21 +8,22 @@
 #include "testableproblem.h"
 
 using namespace com;
+using namespace com::graph;
 
 namespace graphsandtrees{
 
   //Chapter 4 Question 1
   class RouteBetweenNodes : public TestableProblem {
 
-      void addChildrenOfNodeToQueue(const GraphNode &node, queue<GraphNode> &visitQueue,
+      void addChildrenOfNodeToQueue(const Node &node, queue<Node> &visitQueue,
                                     unordered_set<int> &visitedQueue);
 
-      bool isVisitingNodeAMatch(queue<GraphNode> &visitQueue, const GraphNode &goalNode,
+      bool isVisitingNodeAMatch(queue<Node> &visitQueue, const Node &goalNode,
                                 unordered_set<int> &visitedQueue);
 
-      bool routeBetweenNodes(const GraphNode &fNode, const GraphNode &sNode);
+      bool routeBetweenNodes(const Node &fNode, const Node &sNode);
 
-      void singleTest(const vector<GraphNode> &graph, int leftNodeIndex,
+      void singleTest(const vector<Node> &graph, int leftNodeIndex,
                       int rightNodeIndex, bool expectedResult);
 
     public:

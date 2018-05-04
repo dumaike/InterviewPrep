@@ -9,7 +9,6 @@
 #include "graphnode.h"
 
 using namespace std;
-using namespace com;
 
 //An example set of data structures to use in testing problems
 namespace com {
@@ -17,10 +16,10 @@ namespace com {
     public:
       /* Creates and returns this graph
           0 -> 1 -> 2
-          ?    ?
-          3 -> 4 -> 5
+          0 -> 3 -> 4 -> 5
+          4 -> 1
       */
-      static vector<GraphNode> createGraph1();
+      static vector<com::graph::Node> createGraph1();
 
       static string printIntVector(const vector<int> &values);
   };

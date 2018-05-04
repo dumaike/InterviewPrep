@@ -31,13 +31,16 @@
     <Filter Include="Header Files\language">
       <UniqueIdentifier>{9a0ea886-c3a2-454e-a51b-785ec6a6b535}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\com\graph">
+      <UniqueIdentifier>{56184705-5cd4-4bfa-af93-e3a635e7ad9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\com\graph">
+      <UniqueIdentifier>{80731ad7-e031-4c55-845c-2503f220fd2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="graphnode.cpp">
-      <Filter>Source Files\com</Filter>
     </ClCompile>
     <ClCompile Include="testableproblem.cpp">
       <Filter>Source Files\com</Filter>
@@ -54,13 +57,13 @@
     <ClCompile Include="examplegraphs.cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
+    <ClCompile Include="graphnode.cpp">
+      <Filter>Source Files\com\graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="examplegraphs.h">
       <Filter>Header Files\graphsandtrees</Filter>
-    </ClInclude>
-    <ClInclude Include="graphnode.h">
-      <Filter>Header Files\com</Filter>
     </ClInclude>
     <ClInclude Include="testableproblem.h">
       <Filter>Header Files\com</Filter>
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="minimaltree.h">
       <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="graphnode.h">
+      <Filter>Header Files\com\graph</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

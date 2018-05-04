@@ -8,8 +8,8 @@ int main() {
   
   com::TestableProblem* testClass =
     //GRAPHS AND TREES
-    //new graphsandtrees::RouteBetweenNodes();
-    new graphsandtrees::MinimalTree();
+    new graphsandtrees::RouteBetweenNodes();
+    //new graphsandtrees::MinimalTree();
 
   testClass->runTestCases();
   

@@ -4,15 +4,13 @@
 #include "binarytreenode.h"
 #include "testableproblem.h"
 
-using namespace com;
-
 namespace graphsandtrees{
   //Chapter 4 Question 2
-  class MinimalTree : public TestableProblem {
+  class MinimalTree : public com::TestableProblem {
 
-    BinaryTreeNode minimalTree(const vector<int> &values);
+    com::binarytree::Node minimalTree(const vector<int> &values);
 
-    BinaryTreeNode* makeTreeHelper(const vector<int> &values, int left, int right);
+    com::binarytree::Node* makeTreeHelper(const vector<int> &values, int left, int right);
 
     void singleTest(const vector<int> &inputVector);
 

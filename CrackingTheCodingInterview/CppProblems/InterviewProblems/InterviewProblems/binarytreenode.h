@@ -4,44 +4,44 @@
 #include <iostream>
 #include <string>
 
-//-----------------------------------------------------------------------------
+//*-----------------------------------------------------------------------------------------*/
+//A node class for binay tree problems. It's somewhat ambigously named "Node" with
+//a nested namespace to help with transcribing from a whiteboard with as little
+//editing as possible
+//*-----------------------------------------------------------------------------------------*/
+namespace com {
+  namespace binarytree {
+    class Node {
 
-namespace com
-{
-  class BinaryTreeNode {
+      //A class to help print out trees in the console
+      struct NodeDepth
+      {
+        Node* n;
+        int lvl;
+        NodeDepth(Node* n_, int lvl_) : n(n_), lvl(lvl_) {}
+      };
 
-    //A class to help print out trees in the console
-    struct NodeDepth
-    {
-      BinaryTreeNode* n;
-      int lvl;
-      NodeDepth(BinaryTreeNode* n_, int lvl_) : n(n_), lvl(lvl_) {}
+      int data;
+      Node* leftChild;
+      Node* rightChild;
+
+    public:
+
+      Node();
+      Node(int data);
+      ~Node();
+
+      void setLeftChild(Node* node);
+      void setRightChild(Node* node);
+      Node* getLeftChild() const;
+      Node* getRightChild() const;
+      int getValue() const;
+      int getHeight() const;
+      bool operator==(const Node &node) const;
+      std::string static toString(Node* root);
+
     };
-
-    int data;
-    BinaryTreeNode* leftChild;
-    BinaryTreeNode* rightChild;
-
-  public:
-
-    BinaryTreeNode();
-    BinaryTreeNode(int data);
-    ~BinaryTreeNode();
-
-    void setLeftChild(BinaryTreeNode* node);
-    void setRightChild(BinaryTreeNode* node);
-    BinaryTreeNode* getLeftChild() const;
-    BinaryTreeNode* getRightChild() const;
-    int getValue() const;
-    int getHeight() const;
-    bool operator==(const BinaryTreeNode &node) const;
-    std::string static toString(BinaryTreeNode* root);
-
-  private:
-
-    std::string spacesPerTreeDepth(int depth, int height) const;
-
-  };
+  }
 }
 
 #endif

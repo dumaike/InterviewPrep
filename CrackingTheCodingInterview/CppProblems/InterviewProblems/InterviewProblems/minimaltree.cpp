@@ -6,6 +6,8 @@
 #include "examplegraphs.h"
 
 using namespace graphsandtrees;
+using namespace com;
+using namespace com::binarytree;
 
 void MinimalTree::runTestCases()
 {
@@ -17,7 +19,7 @@ void MinimalTree::runTestCases()
 
 void MinimalTree::singleTest(const vector<int> &inputVector) {
   cout << "Vector: " << ExampleDataStructures::printIntVector(inputVector) << " becomes:" << endl;
-  BinaryTreeNode root = minimalTree(inputVector);
+  Node root = minimalTree(inputVector);
   cout << root.toString(&root) << endl;
 }
 
@@ -28,14 +30,14 @@ void MinimalTree::singleTest(const vector<int> &inputVector) {
 // a production environment.
 //*-----------------------------------------------------------------------------------------*/
 
-BinaryTreeNode MinimalTree::minimalTree(const vector<int> &values) {
+Node MinimalTree::minimalTree(const vector<int> &values) {
   if (values.size() == 0) {
     throw invalid_argument("Array size 0");
     return NULL;
   }
 
   int middle = values.size() / 2;
-  BinaryTreeNode root = BinaryTreeNode(values[middle]);
+  Node root = Node(values[middle]);
 
   if (middle - 1 >= 0) {
     root.setLeftChild(makeTreeHelper(values, 0, middle - 1));
@@ -47,10 +49,10 @@ BinaryTreeNode MinimalTree::minimalTree(const vector<int> &values) {
   return root;
 }
 
-BinaryTreeNode* MinimalTree::makeTreeHelper(const vector<int> &values, int left, int right){
+Node* MinimalTree::makeTreeHelper(const vector<int> &values, int left, int right){
 
   int middle = ((right - left + 1) / 2) + left;
-  BinaryTreeNode* returnNode = new BinaryTreeNode(values[middle]);
+  Node* returnNode = new Node(values[middle]);
 
   if (middle - 1 >= left) {
     returnNode->setLeftChild(makeTreeHelper(values, left, middle - 1));

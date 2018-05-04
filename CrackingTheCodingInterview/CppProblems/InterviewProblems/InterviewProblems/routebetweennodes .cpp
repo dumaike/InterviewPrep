@@ -9,7 +9,7 @@ using namespace graphsandtrees;
 
 void RouteBetweenNodes::runTestCases()
 {
-  vector<GraphNode> sampleGraph = ExampleDataStructures::createGraph1();
+  vector<Node> sampleGraph = ExampleDataStructures::createGraph1();
 
   singleTest(sampleGraph, 1, 5, false);
   singleTest(sampleGraph, 1, 3, true);
@@ -20,7 +20,7 @@ void RouteBetweenNodes::runTestCases()
 }
 
 void RouteBetweenNodes::singleTest(
-    const vector<GraphNode> &graph, int leftNodeIndex, 
+    const vector<Node> &graph, int leftNodeIndex, 
     int rightNodeIndex, bool expectedResult)
 {
   bool isRoute = routeBetweenNodes(graph[leftNodeIndex], graph[rightNodeIndex]);
@@ -38,12 +38,12 @@ void RouteBetweenNodes::singleTest(
 // a production environment.
 //*-----------------------------------------------------------------------------------------*/
 
-bool RouteBetweenNodes::routeBetweenNodes(const GraphNode &fNode, const GraphNode &sNode) {
+bool RouteBetweenNodes::routeBetweenNodes(const Node &fNode, const Node &sNode) {
   unordered_set<int> fNodesVisited = unordered_set<int>();
   unordered_set<int> sNodesVisited = unordered_set<int>();
 
-  queue<GraphNode> fToVisit = queue<GraphNode>();
-  queue<GraphNode> sToVisit = queue<GraphNode>();
+  queue<Node> fToVisit = queue<Node>();
+  queue<Node> sToVisit = queue<Node>();
 
   //Check for first generation children of f that could be s
   addChildrenOfNodeToQueue(fNode, fToVisit, fNodesVisited);
@@ -65,11 +65,11 @@ bool RouteBetweenNodes::routeBetweenNodes(const GraphNode &fNode, const GraphNod
   return false;
 }
 
-void RouteBetweenNodes::addChildrenOfNodeToQueue(const GraphNode &node, queue<GraphNode> &toVisitQueue,
+void RouteBetweenNodes::addChildrenOfNodeToQueue(const Node &node, queue<Node> &toVisitQueue,
   unordered_set<int> &visitedQueue) {
 
-  const vector<GraphNode*> children = node.getChildren();
-  for (GraphNode* node : children) {
+  const vector<Node*> children = node.getChildren();
+  for (Node* node : children) {
     unordered_set<int>::const_iterator got = visitedQueue.find(node->getValue());
 
     //If we haven't visited this node already, plan to visit it
@@ -80,11 +80,11 @@ void RouteBetweenNodes::addChildrenOfNodeToQueue(const GraphNode &node, queue<Gr
   }
 }
 
-bool RouteBetweenNodes::isVisitingNodeAMatch(queue<GraphNode> &toVisitQueue, const GraphNode &goalNode,
+bool RouteBetweenNodes::isVisitingNodeAMatch(queue<Node> &toVisitQueue, const Node &goalNode,
   unordered_set<int> &visitedQueue) {
   //If we have a node to visit from f, check that one
   if (toVisitQueue.size() > 0) {
-    GraphNode visitingNode = toVisitQueue.back();
+    Node visitingNode = toVisitQueue.back();
 
     //If it's s, and we're done
     if (visitingNode == goalNode) {

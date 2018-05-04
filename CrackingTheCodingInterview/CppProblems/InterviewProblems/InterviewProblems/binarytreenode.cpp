@@ -4,42 +4,42 @@
 #include <cmath>
 #include <list>
 
-using namespace com;
+using namespace com::binarytree;
 using namespace std;
 
 
-BinaryTreeNode::BinaryTreeNode() {
+Node::Node() {
   data = 0;
 }
 
-BinaryTreeNode::BinaryTreeNode(int nodeData) {
+Node::Node(int nodeData) {
   data = nodeData;
 }
 
-BinaryTreeNode::~BinaryTreeNode() {
+Node::~Node() {
 }
 
-void BinaryTreeNode::setLeftChild(BinaryTreeNode* node) {
+void Node::setLeftChild(Node* node) {
   leftChild = node;
 }
 
-void BinaryTreeNode::setRightChild(BinaryTreeNode* node) {
+void Node::setRightChild(Node* node) {
   rightChild = node;
 }
 
-BinaryTreeNode* BinaryTreeNode::getLeftChild() const {
+Node* Node::getLeftChild() const {
   return leftChild;
 }
 
-BinaryTreeNode* BinaryTreeNode::getRightChild() const {
+Node* Node::getRightChild() const {
   return rightChild;
 }
 
-int BinaryTreeNode::getValue() const {
+int Node::getValue() const {
   return data;
 }
 
-int BinaryTreeNode::getHeight() const{
+int Node::getHeight() const{
 
   int leftHeight = leftChild == NULL ? 1 : leftChild->getHeight() + 1;
   int rightHeight = rightChild == NULL ? 1 : rightChild->getHeight() + 1;
@@ -53,7 +53,7 @@ int BinaryTreeNode::getHeight() const{
 }
 
 //Algorithm adapted from: https://stackoverflow.com/questions/801740/c-how-to-draw-a-binary-tree-to-the-console
-string BinaryTreeNode::toString(BinaryTreeNode* root) {
+string Node::toString(Node* root) {
   int depth = root->getHeight();
 
   char buf[1024];
@@ -103,7 +103,7 @@ string BinaryTreeNode::toString(BinaryTreeNode* root) {
 
 //We're assuming, for all these example problems, that there are no duplicate nodes
 //in a graph with the same value to avoid the exercises becoming about refernece
-bool BinaryTreeNode::operator==(const BinaryTreeNode &node) const{
+bool Node::operator==(const Node &node) const{
   return this->getValue() == node.getValue();
 }
 
