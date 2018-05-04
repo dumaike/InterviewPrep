@@ -3,14 +3,15 @@
 
 #include <vector>
 
-//*-----------------------------------------------------------------------------------------*/
-// A very basic interface for implementing test cases of code transcribed from my whiteboard
-// problem solving sessions. Just so I don't have to edit main too much for each problem.
-//*-----------------------------------------------------------------------------------------*/
 using namespace std;
 
 namespace com
 {
+
+//*-----------------------------------------------------------------------------------------*/
+// A very basic interface for implementing test cases of code transcribed from my whiteboard
+// problem solving sessions. Just so I don't have to edit main too much for each problem.
+//*-----------------------------------------------------------------------------------------*/
   class TestableProblem {
 
   public:

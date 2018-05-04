@@ -2,8 +2,6 @@
 #define GRAPHSANDTREES_EXAMPLEGRAPHS_H_
 
 #include <iostream>
-#include <unordered_set>
-#include <queue>
 #include <string>
 
 #include "graphnode.h"
@@ -32,27 +30,53 @@ namespace com {
       static vector<com::graph::Node> createGraph1();
 
       /* Creates and returns this binary tree
-                   0
-              1          2
-          3      4          5
-            6
+      /            0
+      /          /   \
+      /         /     \
+      /        1       2
+      /       / \       \
+      /      3   4       5
+      /     /
+      /    6
+      /     \
+      /      7
       */
       static com::binarytree::Node* createTree1();
 
-      /*
-      Creates and returns this binary tree
-                  0
-                1
-              2
-            3
-          4
+      /* Creates and returns this binary tree
+      /               0
+      /              /  \
+      /             /    \
+      /            /      \
+      /           /        \
+      /          /          \
+      /         1            2
+      /        / \          / \
+      /       /   \        /   \
+      /      3     4      5     6
+      /     / \   / \    / \   / \
+      /    7   8 9   10 11 12 13 14
       */
       static com::binarytree::Node* createTree2();
 
       /*
-      Creates and returns a binary tree with just a single root node
+      Creates and returns this binary tree
+                  0
+                 /
+                1
+               /
+              2
+             /
+            3
+           /
+          4
       */
       static com::binarytree::Node* createTree3();
+
+      /*
+      Creates and returns a binary tree with just a single root node
+      */
+      static com::binarytree::Node* createTree4();
 
       static string toString(const vector<int> &values);
       static string toString(binarytree::Node* root);

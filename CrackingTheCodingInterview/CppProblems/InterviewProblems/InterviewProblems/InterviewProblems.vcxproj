@@ -22,6 +22,7 @@
     <ClCompile Include="binarytreenode.cpp" />
     <ClCompile Include="datastructureutils.cpp" />
     <ClCompile Include="graphnode.cpp" />
+    <ClCompile Include="isbalanced.cpp" />
     <ClCompile Include="linkedlistnode.cpp" />
     <ClCompile Include="listofdepths.cpp" />
     <ClCompile Include="main.cpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="binarytreenode.h" />
     <ClInclude Include="datastructureutils.h" />
     <ClInclude Include="graphnode.h" />
+    <ClInclude Include="isbalanced.h" />
     <ClInclude Include="linkedlistnode.h" />
     <ClInclude Include="listofdepths.h" />
     <ClInclude Include="minimaltree.h" />

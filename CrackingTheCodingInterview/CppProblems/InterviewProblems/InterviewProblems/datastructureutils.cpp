@@ -1,5 +1,8 @@
 #include "datastructureutils.h"
 
+#include <queue>
+#include <list>
+
 using namespace com;
 
 /* Creates and returns this graph
@@ -24,13 +27,6 @@ vector<graph::Node> DataStructureUtils::createGraph1() {
   return returnNodes;
 }
 
-/*
-Creates and returns this binary tree
-0
-1          2
-3       4         5
-6
-*/
 binarytree::Node* DataStructureUtils::createTree1() {
   binarytree::Node* root = new binarytree::Node(0);
   binarytree::Node* n1 = new binarytree::Node(1);
@@ -39,6 +35,7 @@ binarytree::Node* DataStructureUtils::createTree1() {
   binarytree::Node* n4 = new binarytree::Node(4);
   binarytree::Node* n5 = new binarytree::Node(5);
   binarytree::Node* n6 = new binarytree::Node(6);
+  binarytree::Node* n7 = new binarytree::Node(7);
 
   root->setLeftChild(n1);
   root->setRightChild(n2);
@@ -48,20 +45,38 @@ binarytree::Node* DataStructureUtils::createTree1() {
 
   n2->setRightChild(n5);
 
-  n3->setRightChild(n6);
+  n3->setLeftChild(n6);
+
+  n6->setRightChild(n7);
 
   return root;
 }
 
-/*
-Creates and returns this binary tree
-                0
-              1
-            2
-          3
-        4
-*/
 binarytree::Node* DataStructureUtils::createTree2() {
+  int nodeIndex = 0;
+  int numNodes = 13;
+  binarytree::Node* root = new binarytree::Node(nodeIndex);
+
+  queue<binarytree::Node*> nodesToChild = queue<binarytree::Node*>();
+  nodesToChild.push(root);
+
+  while (nodeIndex <= numNodes) {
+    binarytree::Node* cur = nodesToChild.front();
+    nodesToChild.pop();
+
+    nodeIndex++;
+    cur->setLeftChild(new binarytree::Node(nodeIndex));
+    nodesToChild.push(cur->getLeftChild());
+
+    nodeIndex++;
+    cur->setRightChild(new binarytree::Node(nodeIndex));
+    nodesToChild.push(cur->getRightChild());
+  }
+
+  return root;
+}
+
+binarytree::Node* DataStructureUtils::createTree3() {
   binarytree::Node* root = new binarytree::Node(0);
   binarytree::Node* n1 = new binarytree::Node(1);
   binarytree::Node* n2 = new binarytree::Node(2);
@@ -79,7 +94,7 @@ binarytree::Node* DataStructureUtils::createTree2() {
 /*
 Creates and returns a binary tree with just a single root node
 */
-binarytree::Node* DataStructureUtils::createTree3() {
+binarytree::Node* DataStructureUtils::createTree4() {
   binarytree::Node* root = new binarytree::Node(0);
 
   return root;

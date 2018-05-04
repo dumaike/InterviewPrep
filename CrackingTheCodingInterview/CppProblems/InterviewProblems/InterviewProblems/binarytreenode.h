@@ -4,13 +4,14 @@
 #include <iostream>
 #include <string>
 
+namespace com {
+  namespace binarytree {
+
 //*-----------------------------------------------------------------------------------------*/
 //A node class for binay tree problems. It's somewhat ambigously named "Node" with
 //a nested namespace to help with transcribing from a whiteboard with as little
 //editing as possible
 //*-----------------------------------------------------------------------------------------*/
-namespace com {
-  namespace binarytree {
     class Node {
 
       int data;

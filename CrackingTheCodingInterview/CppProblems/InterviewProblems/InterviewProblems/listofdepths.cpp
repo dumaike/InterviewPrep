@@ -18,6 +18,7 @@ void ListOfDepths::runTestCases()
   singleTest(DataStructureUtils::createTree1());
   singleTest(DataStructureUtils::createTree2());
   singleTest(DataStructureUtils::createTree3());
+  singleTest(DataStructureUtils::createTree4());
 }
 
 void ListOfDepths::singleTest(binarytree::Node* root)

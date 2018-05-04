@@ -7,13 +7,14 @@
 
 using namespace std;
 
+namespace com {
+  namespace linkedlist {
+
 //*-----------------------------------------------------------------------------------------*/
 //A node class for graph problems. It's somewhat ambigously named "Node" with
 //a nested namespace to help with transcribing from a whiteboard with as little
 //editing as possible
 //*-----------------------------------------------------------------------------------------*/
-namespace com {
-  namespace linkedlist {
     class Node {
 
       int data = 0;

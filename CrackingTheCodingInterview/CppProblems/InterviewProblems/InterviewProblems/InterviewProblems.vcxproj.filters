@@ -78,6 +78,9 @@
     <ClCompile Include="linkedlistnode.cpp">
       <Filter>Source Files\com\linkedlist</Filter>
     </ClCompile>
+    <ClCompile Include="isbalanced.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="linkedlistnode.h">
       <Filter>Header Files\com\linkedlist</Filter>
+    </ClInclude>
+    <ClInclude Include="isbalanced.h">
+      <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
