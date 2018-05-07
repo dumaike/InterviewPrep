@@ -78,6 +78,56 @@ namespace com {
       */
       static com::binarytree::Node* createTree4();
 
+      /* Creates and returns this binary tree
+      /             0
+      /           /  \
+      /          /    \
+      /         0      0
+      /        / \    / \
+      /       0   1  1   0
+      */
+      static com::binarytree::Node* createTree5();
+
+
+      /* Creates and returns this binary tree
+      /             0
+      /           /  \
+      /          /    \
+      /         0      0
+      /        / \    / \
+      /       1   0  0   1
+      */
+      static com::binarytree::Node* createTree6();
+
+
+      /* Creates and returns this binary tree
+      /               0
+      /                 \
+      /                  \
+      /                   1
+      /                  / \
+      /                 /   \
+      /                2     3
+      */
+      static com::binarytree::Node* createTree7();
+
+
+      /* Creates and returns this binary tree
+      /               10
+      /              /  \
+      /             /    \
+      /            /      \
+      /           /        \
+      /          /          \
+      /         5            15
+      /        / \          / \
+      /       /   \        /   \
+      /      3     7      12    17
+      /     / \   / \    / \  
+      /    1   4 6   8  11  13 
+      */
+      static com::binarytree::Node* createTree8();
+
       static string toString(const vector<int> &values);
       static string toString(binarytree::Node* root);
   };

@@ -17,7 +17,7 @@ void IsBalanced::runTestCases()
   singleTest(DataStructureUtils::createTree4());
 }
 
-void IsBalanced::singleTest(binarytree::Node* root)
+void IsBalanced::singleTest(Node* root)
 {
   cout << "The following binary tree is ";
 

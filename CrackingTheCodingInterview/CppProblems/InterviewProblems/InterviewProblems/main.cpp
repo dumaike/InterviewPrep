@@ -7,6 +7,7 @@
 #include "minimaltree.h"
 #include "listofdepths.h"
 #include "isbalanced.h"
+#include "validatebst.h"
 
 int main() {
   
@@ -15,7 +16,8 @@ int main() {
     //new graphsandtrees::RouteBetweenNodes();
     //new graphsandtrees::MinimalTree();
     //new graphsandtrees::ListOfDepths();
-    new graphsandtrees::IsBalanced();
+    //new graphsandtrees::IsBalanced();
+    new graphsandtrees::ValidateBst();
 
   testClass->runTestCases();
 

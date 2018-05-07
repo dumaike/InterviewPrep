@@ -20,19 +20,19 @@ Node::~Node() {
 }
 
 void Node::setLeftChild(Node* node) {
-  leftChild = node;
+  left = node;
 }
 
 void Node::setRightChild(Node* node) {
-  rightChild = node;
+  right = node;
 }
 
 Node* Node::getLeftChild() const {
-  return leftChild;
+  return left;
 }
 
 Node* Node::getRightChild() const {
-  return rightChild;
+  return right;
 }
 
 int Node::getValue() const {
@@ -41,8 +41,8 @@ int Node::getValue() const {
 
 int Node::getHeight() const{
 
-  int leftHeight = leftChild == NULL ? 1 : leftChild->getHeight() + 1;
-  int rightHeight = rightChild == NULL ? 1 : rightChild->getHeight() + 1;
+  int leftHeight = left == NULL ? 1 : left->getHeight() + 1;
+  int rightHeight = right == NULL ? 1 : right->getHeight() + 1;
 
   if (leftHeight > rightHeight)
   {

@@ -7,11 +7,12 @@
 namespace graphsandtrees{
 
   //Chapter 4 Question 5
-  class ClassName: public com::TestableProblem {
+  class ValidateBst: public com::TestableProblem {
 
-    void singleTest();
+    void singleTest(com::binarytree::Node* root);
 
-    bool isBstValid(com::binarytree::Node *root);
+    bool validateBst(com::binarytree::Node* root);
+    bool validateBst(com::binarytree::Node* root, int &direction);
 
     public:
 

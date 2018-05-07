@@ -14,11 +14,18 @@ namespace com {
 //*-----------------------------------------------------------------------------------------*/
     class Node {
 
-      int data;
-      Node* leftChild;
-      Node* rightChild;
-
     public:
+
+      //These three members (data, left, right) would normally be private, and only accessable 
+      //through getters and setters, but for the pupose of whiteboarding, it's much easier
+      //to access them directly
+
+      //The data held in the node
+      int data;
+      //The left child of the node, NULL if this node has no left child
+      Node* left;
+      //The right child of the node, NULL if this node has no right child
+      Node* right;
 
       Node();
       Node(int data);
@@ -31,7 +38,6 @@ namespace com {
       int getValue() const;
       int getHeight() const;
       bool operator==(const Node &node) const;
-      std::string static toString(Node* root);
 
     };
   }
