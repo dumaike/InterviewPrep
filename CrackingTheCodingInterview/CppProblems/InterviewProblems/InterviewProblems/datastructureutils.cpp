@@ -158,6 +158,34 @@ binarytree::Node* DataStructureUtils::createTree7() {
 }
 
 binarytree::Node* DataStructureUtils::createTree8() {
+  binarytree::Node* root = new binarytree::Node(0);
+  binarytree::Node* n1 = new binarytree::Node(1);
+  binarytree::Node* n2 = new binarytree::Node(-1);
+  binarytree::Node* n3 = new binarytree::Node(3);
+
+  root->setRightChild(n1);
+
+  n1->setLeftChild(n2);
+  n1->setRightChild(n3);
+
+  return root;
+}
+
+binarytree::Node* DataStructureUtils::createTree9() {
+  binarytree::Node* root = new binarytree::Node(0);
+  binarytree::Node* n1 = new binarytree::Node(-1);
+  binarytree::Node* n2 = new binarytree::Node(-2);
+  binarytree::Node* n3 = new binarytree::Node(3);
+
+  root->setLeftChild(n1);
+
+  n1->setLeftChild(n2);
+  n1->setRightChild(n3);
+
+  return root;
+}
+
+binarytree::Node* DataStructureUtils::createTree10() {
   binarytree::Node* root = new binarytree::Node(10);
   binarytree::Node* n5 = new binarytree::Node(5);
   binarytree::Node* n15 = new binarytree::Node(15);

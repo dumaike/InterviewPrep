@@ -1,6 +1,7 @@
 #include "validatebst.h"
 
 #include <iostream>
+#include <climits>
 
 #include "datastructureutils.h"
 
@@ -18,6 +19,8 @@ void ValidateBst::runTestCases()
   singleTest(DataStructureUtils::createTree6());
   singleTest(DataStructureUtils::createTree7());
   singleTest(DataStructureUtils::createTree8());
+  singleTest(DataStructureUtils::createTree9());
+  singleTest(DataStructureUtils::createTree10());
 }
 
 void ValidateBst::singleTest(Node* root)
@@ -44,10 +47,10 @@ void ValidateBst::singleTest(Node* root)
 //*-----------------------------------------------------------------------------------------*/
 bool ValidateBst::validateBst(Node* root) {
   int direction = 0;
-  return validateBst(root, direction);
+  return validateBst(root, direction, INT_MIN, INT_MAX);
 }
 
-bool ValidateBst::validateBst(Node* root, int &direction) {
+bool ValidateBst::validateBst(Node* root, int &direction, int minParent, int maxParent) {
   if (direction == 0) {
     if (root->left!= NULL) {
       int leftVal = root->left->data;
@@ -67,20 +70,48 @@ bool ValidateBst::validateBst(Node* root, int &direction) {
   }
 
   if (direction != 0) {
-    if (root->left != NULL &&
-      (root->left->data - root->data)*direction > 0) {
-        return false;
+
+    if (root->left != NULL){
+      if ((root->left->data - root->data)*direction > 0 ||
+          root->left->data < minParent ||
+          root->left->data > maxParent) {
+        return false; 
+      }
     }
-    if (root->right != NULL &&
-      (root->right->data - root->data)*direction < 0) {
+    if (root->right != NULL) {
+      if ((root->right->data - root->data)*direction < 0 ||
+          root->right->data < minParent ||
+          root->right->data > maxParent) {
         return false;
+      }
     }
   }
 
-  if (root->left != NULL && !validateBst(root->left, direction)) {
-    return false;
-  }if (root->right != NULL && !validateBst(root->right, direction)) {
-    return false;
+  if (root->left != NULL) {
+    int tmpMax = maxParent;
+    int tmpMin = minParent;
+    if (direction > 0) {
+      tmpMax = root->data;
+    } else {
+      tmpMin = root->data;
+    }
+
+    if (!validateBst(root->left, direction, tmpMin, tmpMax)) {
+      return false;
+    }
+  }
+  if (root->right != NULL){
+    int tmpMax = maxParent;
+    int tmpMin = minParent;
+    if (direction > 0) {
+      tmpMin = root->data;
+    } else {
+      tmpMax = root->data;
+    }
+
+    if (!validateBst(root->right, direction, tmpMin, tmpMax)) {
+      return false;
+    }
   }
 
   return true;

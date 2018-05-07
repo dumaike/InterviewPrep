@@ -12,7 +12,7 @@ namespace graphsandtrees{
     void singleTest(com::binarytree::Node* root);
 
     bool validateBst(com::binarytree::Node* root);
-    bool validateBst(com::binarytree::Node* root, int &direction);
+    bool validateBst(com::binarytree::Node* root, int &direction, int minParent, int maxParent);
 
     public:
 
