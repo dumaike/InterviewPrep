@@ -29,6 +29,7 @@
     <ClCompile Include="minimaltree.cpp" />
     <ClCompile Include="routebetweennodes .cpp" />
     <ClCompile Include="testableproblem.cpp" />
+    <ClCompile Include="validatebst.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binarytreenode.h" />
@@ -41,6 +42,7 @@
     <ClInclude Include="printklastlines.h" />
     <ClInclude Include="routebetweennodes.h" />
     <ClInclude Include="testableproblem.h" />
+    <ClInclude Include="validatebst.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FB9A882E-ECB5-48E3-9ADB-58093AE45BD4}</ProjectGuid>
