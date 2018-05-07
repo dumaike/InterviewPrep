@@ -98,7 +98,6 @@ namespace com {
       */
       static com::binarytree::Node* createTree6();
 
-
       /* Creates and returns this binary tree
       /               0
       /                 \

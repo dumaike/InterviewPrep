@@ -51,8 +51,12 @@ bool ValidateBst::validateBst(Node* root) {
 }
 
 bool ValidateBst::validateBst(Node* root, int &direction, int minParent, int maxParent) {
+  if (root == NULL){
+    return true;
+  }
+
   if (direction == 0) {
-    if (root->left!= NULL) {
+    if (root->left != NULL) {
       int leftVal = root->left->data;
       if (leftVal < root->data)
         direction = 1;
@@ -69,50 +73,29 @@ bool ValidateBst::validateBst(Node* root, int &direction, int minParent, int max
     }
   }
 
-  if (direction != 0) {
-
-    if (root->left != NULL){
-      if ((root->left->data - root->data)*direction > 0 ||
-          root->left->data < minParent ||
-          root->left->data > maxParent) {
-        return false; 
-      }
-    }
-    if (root->right != NULL) {
-      if ((root->right->data - root->data)*direction < 0 ||
-          root->right->data < minParent ||
-          root->right->data > maxParent) {
-        return false;
-      }
-    }
-  }
-
-  if (root->left != NULL) {
-    int tmpMax = maxParent;
-    int tmpMin = minParent;
-    if (direction > 0) {
-      tmpMax = root->data;
-    } else {
-      tmpMin = root->data;
+  if (direction > 0) {
+    if (root->data < minParent || root->data > maxParent) {
+      return false;
     }
 
-    if (!validateBst(root->left, direction, tmpMin, tmpMax)) {
+    if (!validateBst(root->left, direction, minParent, root->data)) {
+      return false;
+    }
+
+    if (!validateBst(root->right, direction, root->data, maxParent)) {
+      return false;
+    }
+  } else {
+    if (root->data < minParent || root->data > maxParent) {
+      return false;
+    }
+
+    if (!validateBst(root->left, direction, root->data, maxParent)) {
+      return false;
+    }
+
+    if (!validateBst(root->right, direction, minParent, root->data)) {
       return false;
     }
   }
-  if (root->right != NULL){
-    int tmpMax = maxParent;
-    int tmpMin = minParent;
-    if (direction > 0) {
-      tmpMin = root->data;
-    } else {
-      tmpMax = root->data;
-    }
-
-    if (!validateBst(root->right, direction, tmpMin, tmpMax)) {
-      return false;
-    }
-  }
-
-  return true;
 }
