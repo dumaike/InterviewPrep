@@ -13,16 +13,16 @@ using namespace com;
 using namespace graphsandtrees;
 using namespace std;
 
-void ListOfDepths::runTestCases()
-{
+void ListOfDepths::runTestCases() {
+
   singleTest(DataStructureUtils::createTree1());
   singleTest(DataStructureUtils::createTree2());
   singleTest(DataStructureUtils::createTree3());
   singleTest(DataStructureUtils::createTree4());
 }
 
-void ListOfDepths::singleTest(binarytree::Node* root)
-{
+void ListOfDepths::singleTest(binarytree::Node* root) {
+
   cout << "Binary tree: " << endl << DataStructureUtils::toString(root) << "becomes: " << endl;
   vector<linkedlist::Node*> nodeLists = listOfDepths(root);
   for (unsigned int i = 0; i < nodeLists.size(); ++i) {

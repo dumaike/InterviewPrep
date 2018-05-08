@@ -9,8 +9,8 @@ using namespace graphsandtrees;
 using namespace com;
 using namespace com::binarytree;
 
-void ValidateBst::runTestCases()
-{
+void ValidateBst::runTestCases(){
+
   singleTest(DataStructureUtils::createTree1());
   singleTest(DataStructureUtils::createTree2());
   singleTest(DataStructureUtils::createTree3());

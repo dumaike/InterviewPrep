@@ -7,8 +7,8 @@
 
 using namespace graphsandtrees;
 
-void RouteBetweenNodes::runTestCases()
-{
+void RouteBetweenNodes::runTestCases() {
+
   vector<Node> sampleGraph = DataStructureUtils::createGraph1();
 
   singleTest(sampleGraph, 1, 5, false);
@@ -21,8 +21,8 @@ void RouteBetweenNodes::runTestCases()
 
 void RouteBetweenNodes::singleTest(
     const vector<Node> &graph, int leftNodeIndex, 
-    int rightNodeIndex, bool expectedResult)
-{
+    int rightNodeIndex, bool expectedResult){
+
   bool isRoute = routeBetweenNodes(graph[leftNodeIndex], graph[rightNodeIndex]);
   string routeAsString = isRoute ? "true" : "false";
   string testPassedAsString = isRoute == expectedResult ? "Test Passed" : "Test Failed";

@@ -3,10 +3,10 @@
 
 #include "testableproblem.h"
 
-namespace CHAPTER_NAMESPACE{
+namespace graphsandtrees{
 
   //Chapter Y Question X
-  class ClassName: public com::TestableProblem {
+  class Successor: public com::TestableProblem {
 
     void singleTest();
 

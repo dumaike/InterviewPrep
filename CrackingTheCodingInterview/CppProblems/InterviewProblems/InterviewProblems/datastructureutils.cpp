@@ -221,6 +221,49 @@ binarytree::Node* DataStructureUtils::createTree10() {
   return root;
 }
 
+binarytree::Node* DataStructureUtils::createTree11() {
+  binarytree::Node* root = new binarytree::Node(8);
+  binarytree::Node* n1 = new binarytree::Node(1);
+  binarytree::Node* n2 = new binarytree::Node(2);
+  binarytree::Node* n3 = new binarytree::Node(3);
+  binarytree::Node* n4 = new binarytree::Node(4);
+  binarytree::Node* n5 = new binarytree::Node(5);
+  binarytree::Node* n6 = new binarytree::Node(6);
+  binarytree::Node* n7 = new binarytree::Node(7);
+  binarytree::Node* n8 = new binarytree::Node(8);
+  binarytree::Node* n9 = new binarytree::Node(9);
+  binarytree::Node* n10 = new binarytree::Node(10);
+  binarytree::Node* n11 = new binarytree::Node(11);
+  binarytree::Node* n12 = new binarytree::Node(12);
+  binarytree::Node* n13 = new binarytree::Node(13);
+  binarytree::Node* n14 = new binarytree::Node(14);
+  binarytree::Node* n15 = new binarytree::Node(15);
+
+  root->setLeftChild(n4);
+  root->setRightChild(n12);
+
+  n4->setLeftChild(n2);
+  n4->setRightChild(n6);
+
+  n2->setLeftChild(n1);
+  n2->setRightChild(n3);
+
+  n6->setLeftChild(n5);
+  n6->setRightChild(n7);
+
+  n12->setLeftChild(n10);
+  n12->setRightChild(n14);
+
+  n10->setLeftChild(n9);
+  n10->setRightChild(n11);
+
+  n14->setLeftChild(n13);
+  n14->setRightChild(n15);
+
+
+  return root;
+}
+
 //A simple vector print for data testing
 string com::DataStructureUtils::toString(const vector<int> &values) {
   string returnString = "{";

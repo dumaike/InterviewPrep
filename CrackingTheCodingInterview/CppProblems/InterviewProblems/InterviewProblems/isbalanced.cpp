@@ -9,16 +9,14 @@ using namespace graphsandtrees;
 using namespace com;
 using namespace com::binarytree;
 
-void IsBalanced::runTestCases()
-{
+void IsBalanced::runTestCases() {
   singleTest(DataStructureUtils::createTree1());
   singleTest(DataStructureUtils::createTree2());
   singleTest(DataStructureUtils::createTree3());
   singleTest(DataStructureUtils::createTree4());
 }
 
-void IsBalanced::singleTest(Node* root)
-{
+void IsBalanced::singleTest(Node* root) {
   cout << "The following binary tree is ";
 
   bool balanced = isBalanced(root);

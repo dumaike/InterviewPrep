@@ -8,6 +8,7 @@
 #include "listofdepths.h"
 #include "isbalanced.h"
 #include "validatebst.h"
+#include "successor.h"
 
 int main() {
   
@@ -17,7 +18,8 @@ int main() {
     //new graphsandtrees::MinimalTree();
     //new graphsandtrees::ListOfDepths();
     //new graphsandtrees::IsBalanced();
-    new graphsandtrees::ValidateBst();
+    //new graphsandtrees::ValidateBst();
+    new graphsandtrees::Successor();
 
   testClass->runTestCases();
 

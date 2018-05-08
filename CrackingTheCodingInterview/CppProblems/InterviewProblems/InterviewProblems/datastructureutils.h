@@ -60,7 +60,7 @@ namespace com {
       static com::binarytree::Node* createTree2();
 
       /*
-      Creates and returns this binary tree
+      Creates and returns this binary search tree
       /            0
       /           /
       /          1
@@ -131,7 +131,7 @@ namespace com {
       */
       static com::binarytree::Node* createTree9();
 
-      /* Creates and returns this binary tree
+      /* Creates and returns this binary search tree
       /               10
       /              /  \
       /             /    \
@@ -146,6 +146,23 @@ namespace com {
       /    1   4 6   8  11  13 
       */
       static com::binarytree::Node* createTree10();
+
+
+      /* Creates and returns this binary search tree
+      /               8
+      /              /  \
+      /             /    \
+      /            /      \
+      /           /        \
+      /          /          \
+      /         4            12
+      /        / \          / \
+      /       /   \        /   \
+      /      2     6      10   14
+      /     / \   / \    / \   / \
+      /    1   3 5   7  9  11 13  15
+      */
+      static com::binarytree::Node* createTree11();
 
       static string toString(const vector<int> &values);
       static string toString(binarytree::Node* root);

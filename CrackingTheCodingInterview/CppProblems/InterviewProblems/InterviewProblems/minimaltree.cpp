@@ -9,8 +9,8 @@ using namespace graphsandtrees;
 using namespace com;
 using namespace com::binarytree;
 
-void MinimalTree::runTestCases()
-{
+void MinimalTree::runTestCases() {
+
   singleTest(vector<int>{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15});
   singleTest(vector<int>{0});
   singleTest(vector<int>{0,0,0,0,0});

@@ -26,6 +26,9 @@ namespace com {
       Node* left;
       //The right child of the node, NULL if this node has no right child
       Node* right;
+      //The parent of the node. Dont use this if the example doesn't explicitly say that
+      //it's available for use. Most binary trees don't store this
+      Node* parent;
 
       Node();
       Node(int data);

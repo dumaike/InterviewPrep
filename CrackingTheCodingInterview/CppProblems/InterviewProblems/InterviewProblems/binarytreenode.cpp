@@ -21,10 +21,12 @@ Node::~Node() {
 
 void Node::setLeftChild(Node* node) {
   left = node;
+  node->parent = this;
 }
 
 void Node::setRightChild(Node* node) {
   right = node;
+  node->parent = this;
 }
 
 Node* Node::getLeftChild() const {

@@ -28,6 +28,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="minimaltree.cpp" />
     <ClCompile Include="routebetweennodes .cpp" />
+    <ClCompile Include="successor.cpp" />
     <ClCompile Include="testableproblem.cpp" />
     <ClCompile Include="validatebst.cpp" />
   </ItemGroup>
@@ -41,6 +42,7 @@
     <ClInclude Include="minimaltree.h" />
     <ClInclude Include="printklastlines.h" />
     <ClInclude Include="routebetweennodes.h" />
+    <ClInclude Include="successor.h" />
     <ClInclude Include="testableproblem.h" />
     <ClInclude Include="validatebst.h" />
   </ItemGroup>
