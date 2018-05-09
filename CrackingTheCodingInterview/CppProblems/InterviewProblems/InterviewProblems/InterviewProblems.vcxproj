@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="binarytreenode.cpp" />
+    <ClCompile Include="buildorder.cpp" />
     <ClCompile Include="datastructureutils.cpp" />
     <ClCompile Include="graphnode.cpp" />
     <ClCompile Include="isbalanced.cpp" />
@@ -34,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binarytreenode.h" />
+    <ClInclude Include="buildorder.h" />
     <ClInclude Include="datastructureutils.h" />
     <ClInclude Include="graphnode.h" />
     <ClInclude Include="isbalanced.h" />

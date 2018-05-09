@@ -87,6 +87,9 @@
     <ClCompile Include="successor.cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
+    <ClCompile Include="buildorder.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -123,6 +126,9 @@
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
     <ClInclude Include="successor.h">
+      <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="buildorder.h">
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
   </ItemGroup>

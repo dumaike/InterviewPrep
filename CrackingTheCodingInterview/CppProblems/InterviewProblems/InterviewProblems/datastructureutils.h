@@ -165,6 +165,7 @@ namespace com {
       static com::binarytree::Node* createTree11();
 
       static string toString(const vector<int> &values);
+      static string toString(const vector<char> &values);
       static string toString(binarytree::Node* root);
   };
 }

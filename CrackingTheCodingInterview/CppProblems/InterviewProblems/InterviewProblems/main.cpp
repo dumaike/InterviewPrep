@@ -9,6 +9,7 @@
 #include "isbalanced.h"
 #include "validatebst.h"
 #include "successor.h"
+#include "buildorder.h"
 
 int main() {
   
@@ -19,7 +20,8 @@ int main() {
     //new graphsandtrees::ListOfDepths();
     //new graphsandtrees::IsBalanced();
     //new graphsandtrees::ValidateBst();
-    new graphsandtrees::Successor();
+    //new graphsandtrees::Successor();
+    new graphsandtrees::BuildOrder();
 
   testClass->runTestCases();
 

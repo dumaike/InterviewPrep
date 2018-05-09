@@ -270,7 +270,22 @@ string com::DataStructureUtils::toString(const vector<int> &values) {
 
   for (int i = 0; i < values.size(); ++i) {
     returnString += to_string(values[i]);
-    if (i < values.size() - 1){
+    if (i < values.size() - 1) {
+      returnString += ", ";
+    }
+  }
+  returnString += "}";
+
+  return returnString;
+}
+
+//A simple vector print for data testing
+string com::DataStructureUtils::toString(const vector<char> &values) {
+  string returnString = "{";
+
+  for (int i = 0; i < values.size(); ++i) {
+    returnString += values[i];
+    if (i < values.size() - 1) {
       returnString += ", ";
     }
   }
