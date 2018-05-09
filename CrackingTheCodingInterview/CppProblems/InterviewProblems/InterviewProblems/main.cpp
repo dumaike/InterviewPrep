@@ -10,6 +10,7 @@
 #include "validatebst.h"
 #include "successor.h"
 #include "buildorder.h"
+#include "firstcommonancestor.h"
 
 int main() {
   
@@ -21,7 +22,8 @@ int main() {
     //new graphsandtrees::IsBalanced();
     //new graphsandtrees::ValidateBst();
     //new graphsandtrees::Successor();
-    new graphsandtrees::BuildOrder();
+    //new graphsandtrees::BuildOrder();
+    new graphsandtrees::FirstCommonAncestor();
 
   testClass->runTestCases();
 
