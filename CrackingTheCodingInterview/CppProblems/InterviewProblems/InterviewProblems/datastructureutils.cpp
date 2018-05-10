@@ -266,15 +266,17 @@ binarytree::Node* DataStructureUtils::createTree11() {
 
 
 binarytree::Node* DataStructureUtils::createTree12() {
-  binarytree::Node* root = new binarytree::Node(12);
-  binarytree::Node* n10 = new binarytree::Node(10);
-  binarytree::Node* n14 = new binarytree::Node(14);
-  binarytree::Node* n9 = new binarytree::Node(9);
+  binarytree::Node* root = new binarytree::Node(15);
+  binarytree::Node* n10 = new binarytree::Node(12);
+  binarytree::Node* n14 = new binarytree::Node(17);
+  binarytree::Node* n9 = new binarytree::Node(11);
+  binarytree::Node* n3 = new binarytree::Node(13);
 
   root->setRightChild(n14);
   root->setLeftChild(n10);
-
+  
   n10->setLeftChild(n9);
+  n10->setRightChild(n3);
 
   return root;
 }

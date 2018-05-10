@@ -4,12 +4,11 @@
 
 using namespace CHAPTER_NAMESPACE;
 
-void ClassName::runTestCases()
-{
+void ClassName::runTestCases(){
+  singleTest();
 }
 
-void ClassName::singleTest()
-{
+void ClassName::singleTest(){
   cout << "Running one test!";
 }
 

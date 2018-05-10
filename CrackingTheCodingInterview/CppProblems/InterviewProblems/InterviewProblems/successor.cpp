@@ -8,8 +8,7 @@ using namespace graphsandtrees;
 using namespace com::binarytree;
 using namespace com;
 
-void Successor::runTestCases()
-{
+void Successor::runTestCases(){
   singleTest(DataStructureUtils::createTree1());
   singleTest(DataStructureUtils::createTree2());
   singleTest(DataStructureUtils::createTree3());

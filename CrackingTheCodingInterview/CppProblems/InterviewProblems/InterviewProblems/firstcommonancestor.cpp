@@ -8,8 +8,7 @@ using namespace graphsandtrees;
 using namespace com::binarytree;
 using namespace com;
 
-void FirstCommonAncestor::runTestCases()
-{
+void FirstCommonAncestor::runTestCases(){
   Node* root = DataStructureUtils::createTree2();
   Node* n1 = root->left;
   Node* n7 = root->left->left->left;
@@ -24,8 +23,7 @@ void FirstCommonAncestor::runTestCases()
   singleTest(n8, n5, 0);
 }
 
-void FirstCommonAncestor::singleTest(Node* first, Node* second, int result)
-{
+void FirstCommonAncestor::singleTest(Node* first, Node* second, int result){
   Node* resultNode = firstCommonAncestor(first, second);
   cout << "The first common ancestor of " << first->data << " and " << second->data << " is " <<
     resultNode->data << ", goal " << result;

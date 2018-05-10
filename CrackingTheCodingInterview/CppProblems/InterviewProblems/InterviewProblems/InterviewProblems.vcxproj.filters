@@ -96,6 +96,15 @@
     <ClCompile Include="bstsequence.cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
+    <ClCompile Include="issubtree.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
+    <ClCompile Include="exampleproblemtemplate.cpp">
+      <Filter>Source Files\com</Filter>
+    </ClCompile>
+    <ClCompile Include="randomnode.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -141,6 +150,15 @@
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
     <ClInclude Include="bstsequence.h">
+      <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="issubtree.h">
+      <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="exampleproblemtemplate.h">
+      <Filter>Header Files\com</Filter>
+    </ClInclude>
+    <ClInclude Include="randomnode.h">
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
   </ItemGroup>

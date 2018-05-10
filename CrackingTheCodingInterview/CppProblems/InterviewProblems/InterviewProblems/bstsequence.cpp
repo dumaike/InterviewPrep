@@ -7,15 +7,13 @@
 using namespace graphsandtrees;
 using namespace com::binarytree;
 
-void BstSequence::runTestCases()
-{
+void BstSequence::runTestCases(){
   singleTest(com::DataStructureUtils::createTree3());
   singleTest(com::DataStructureUtils::createTree12());
   singleTest(com::DataStructureUtils::createTree13());
 }
 
-void BstSequence::singleTest(Node* root)
-{
+void BstSequence::singleTest(Node* root){
   vector<vector<int>> sequences = bstSequence(root);
   cout << sequences.size() << " possible sequences for the following tree: " << endl << 
     com::DataStructureUtils::toString(root) << endl;

@@ -15,8 +15,7 @@ using namespace std;
 
 using namespace graphsandtrees;
 
-void BuildOrder::runTestCases()
-{
+void BuildOrder::runTestCases(){
   vector<char> projects = vector<char>({ 'a', 'b', 'c', 'd', 'e', 'f' });
   vector<pair<char, char>> dependencies = vector<pair<char, char>>({
     pair<char,char>('a','d'),
@@ -28,8 +27,7 @@ void BuildOrder::runTestCases()
   cout << com::DataStructureUtils::toString(buildOrder(projects, dependencies)) << endl;
 }
 
-void BuildOrder::singleTest()
-{
+void BuildOrder::singleTest(){
   cout << "Running one test!";
 }
 

@@ -1,5 +1,5 @@
-#ifndef CHAPTERNAME_PROBLEMNAME_H_
-#define CHAPTERNAME_PROBLEMNAME_H_
+#ifndef GRAPHSANDTREES_BSTSEQUENCE_H_
+#define GRAPHSANDTREES_BSTSEQUENCE_H_
 
 #include <stack>
 #include <vector>

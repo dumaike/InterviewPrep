@@ -166,12 +166,12 @@ namespace com {
 
 
       /* Creates and returns this binary search tree
-      /            12
+      /            15
       /           /  \
       /          /    \
-      /         10      14
-      /        / 
-      /      93
+      /         12      17
+      /        /  \
+      /       11  13
       */
       static com::binarytree::Node* createTree12();
 

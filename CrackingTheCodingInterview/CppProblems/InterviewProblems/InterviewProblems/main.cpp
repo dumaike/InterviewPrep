@@ -2,6 +2,10 @@
 
 #include <stack>
 
+//Include the example problem to make sure I remember
+//to modify the header guard in new problems
+#include "exampleproblemtemplate.h"
+
 #include "printklastlines.h"
 #include "routebetweennodes.h"
 #include "minimaltree.h"
@@ -12,6 +16,8 @@
 #include "buildorder.h"
 #include "firstcommonancestor.h"
 #include "bstsequence.h"
+#include "issubtree.h"
+#include "randomnode.h"
 
 int main() {
   
@@ -25,7 +31,9 @@ int main() {
     //new graphsandtrees::Successor();
     //new graphsandtrees::BuildOrder();
     //new graphsandtrees::FirstCommonAncestor();
-    new graphsandtrees::BstSequence();
+    //new graphsandtrees::BstSequence();
+    //new graphsandtrees::IsSubtree();
+    new graphsandtrees::RandomNode();
 
   testClass->runTestCases();
 
