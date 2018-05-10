@@ -266,15 +266,37 @@ binarytree::Node* DataStructureUtils::createTree11() {
 
 
 binarytree::Node* DataStructureUtils::createTree12() {
-  binarytree::Node* root = new binarytree::Node(10);
-  binarytree::Node* n5 = new binarytree::Node(5);
-  binarytree::Node* n15 = new binarytree::Node(15);
-  binarytree::Node* n3 = new binarytree::Node(3);
+  binarytree::Node* root = new binarytree::Node(12);
+  binarytree::Node* n10 = new binarytree::Node(10);
+  binarytree::Node* n14 = new binarytree::Node(14);
+  binarytree::Node* n9 = new binarytree::Node(9);
 
-  root->setRightChild(n15);
-  root->setLeftChild(n5);
+  root->setRightChild(n14);
+  root->setLeftChild(n10);
 
-  n5->setLeftChild(n3);
+  n10->setLeftChild(n9);
+
+  return root;
+}
+
+
+binarytree::Node* DataStructureUtils::createTree13() {
+  binarytree::Node* root = new binarytree::Node(8);
+  binarytree::Node* n2 = new binarytree::Node(2);
+  binarytree::Node* n4 = new binarytree::Node(4);
+  binarytree::Node* n6 = new binarytree::Node(6);
+  binarytree::Node* n10 = new binarytree::Node(10);
+  binarytree::Node* n12 = new binarytree::Node(12);
+  binarytree::Node* n14 = new binarytree::Node(14);
+
+  root->setLeftChild(n4);
+  root->setRightChild(n12);
+
+  n4->setLeftChild(n2);
+  n4->setRightChild(n6);
+
+  n12->setLeftChild(n10);
+  n12->setRightChild(n14);
 
   return root;
 }

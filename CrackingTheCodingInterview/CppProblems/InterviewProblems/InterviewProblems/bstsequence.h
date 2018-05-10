@@ -12,7 +12,7 @@ namespace graphsandtrees {
   //Chapter 4 Question 9
   class BstSequence: public com::TestableProblem {
 
-    vector<vector<int>> bstSequence(com::binarytree::Node* root);
+    vector<vector<int>> bstSequence(com::binarytree::Node* const root);
 
     vector<vector<int>> bstSequence(vector<int> intputPerm, stack<com::binarytree::Node*> options);
 

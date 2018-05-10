@@ -166,14 +166,29 @@ namespace com {
 
 
       /* Creates and returns this binary search tree
-      /            10
+      /            12
       /           /  \
       /          /    \
-      /         5      15
+      /         10      14
       /        / 
-      /       3
+      /      93
       */
       static com::binarytree::Node* createTree12();
+
+
+      /* Creates and returns this binary search tree
+      /               8
+      /              /  \
+      /             /    \
+      /            /      \
+      /           /        \
+      /          /          \
+      /         4            12
+      /        / \          / \
+      /       /   \        /   \
+      /      2     6      10   14
+      */
+      static com::binarytree::Node* createTree13();
 
       static string toString(const vector<int> &values);
       static string toString(const vector<char> &values);

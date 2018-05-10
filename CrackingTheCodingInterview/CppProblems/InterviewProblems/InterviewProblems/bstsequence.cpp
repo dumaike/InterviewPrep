@@ -11,7 +11,7 @@ void BstSequence::runTestCases()
 {
   singleTest(com::DataStructureUtils::createTree3());
   singleTest(com::DataStructureUtils::createTree12());
-  singleTest(com::DataStructureUtils::createTree1());
+  singleTest(com::DataStructureUtils::createTree13());
 }
 
 void BstSequence::singleTest(Node* root)
