@@ -11,6 +11,7 @@
 #include "successor.h"
 #include "buildorder.h"
 #include "firstcommonancestor.h"
+#include "bstsequence.h"
 
 int main() {
   
@@ -23,7 +24,8 @@ int main() {
     //new graphsandtrees::ValidateBst();
     //new graphsandtrees::Successor();
     //new graphsandtrees::BuildOrder();
-    new graphsandtrees::FirstCommonAncestor();
+    //new graphsandtrees::FirstCommonAncestor();
+    new graphsandtrees::BstSequence();
 
   testClass->runTestCases();
 

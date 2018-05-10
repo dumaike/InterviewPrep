@@ -93,6 +93,9 @@
     <ClCompile Include="firstcommonancestor.cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
+    <ClCompile Include="bstsequence.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -135,6 +138,9 @@
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
     <ClInclude Include="firstcommonancestor.h">
+      <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="bstsequence.h">
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
   </ItemGroup>

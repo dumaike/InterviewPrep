@@ -1,6 +1,8 @@
 #ifndef GRAPHSANDTREES_BUILDORDER_H_
 #define GRAPHSANDTREES_BUILDORDER_H_
 
+#include <vector>
+
 #include "testableproblem.h"
 
 namespace graphsandtrees{

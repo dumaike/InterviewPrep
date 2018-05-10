@@ -264,6 +264,21 @@ binarytree::Node* DataStructureUtils::createTree11() {
   return root;
 }
 
+
+binarytree::Node* DataStructureUtils::createTree12() {
+  binarytree::Node* root = new binarytree::Node(10);
+  binarytree::Node* n5 = new binarytree::Node(5);
+  binarytree::Node* n15 = new binarytree::Node(15);
+  binarytree::Node* n3 = new binarytree::Node(3);
+
+  root->setRightChild(n15);
+  root->setLeftChild(n5);
+
+  n5->setLeftChild(n3);
+
+  return root;
+}
+
 //A simple vector print for data testing
 string com::DataStructureUtils::toString(const vector<int> &values) {
   string returnString = "{";

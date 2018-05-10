@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="binarytreenode.cpp" />
+    <ClCompile Include="bstsequence.cpp" />
     <ClCompile Include="buildorder.cpp" />
     <ClCompile Include="datastructureutils.cpp" />
     <ClCompile Include="firstcommonancestor.cpp" />
@@ -36,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binarytreenode.h" />
+    <ClInclude Include="bstsequence.h" />
     <ClInclude Include="buildorder.h" />
     <ClInclude Include="datastructureutils.h" />
     <ClInclude Include="firstcommonancestor.h" />
