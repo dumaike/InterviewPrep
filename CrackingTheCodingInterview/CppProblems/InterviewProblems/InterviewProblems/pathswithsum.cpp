@@ -10,6 +10,7 @@ using namespace com::binarytree;
 
 void PathsWithSum::runTestCases(){
   singleTest(com::DataStructureUtils::createTree6(), 1);
+  singleTest(com::DataStructureUtils::createTree1(), 4);
 }
 
 void PathsWithSum::singleTest(Node* root, int sum){
@@ -39,7 +40,7 @@ int PathsWithSum::pathsWithSum(Node* root, int sum, int progress) {
 
   return pathsWithSum(root->left, sum, progressToHere) + 
          pathsWithSum(root->right, sum, progressToHere) + 
-         pathsWithSum(root->left, sum, 0) + 
-         pathsWithSum(root->right, sum, 0) + 
+         pathsWithSum(root->left, sum, root->data) + 
+         pathsWithSum(root->right, sum, root->data) + 
          sumFound;
 }
