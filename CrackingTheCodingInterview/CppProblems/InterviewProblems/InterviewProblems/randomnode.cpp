@@ -2,20 +2,30 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include <time.h>
 
 #include "datastructureutils.h"
+
 
 using namespace graphsandtrees;
 using namespace com::binarytree;
 
 void RandomNode::runTestCases(){
+  /* initialize random seed: */
+  srand (time(NULL));
+
   cout << "From the following tree, we got the following nodes: " << endl;
 
   Node* root = com::DataStructureUtils::createTree1();
   cout << com::DataStructureUtils::toString(root) << endl << endl;
 
-  for (int i = 0; i < 20; ++i){
-    cout << randomNode(root)->data << " ";
+  int valueCounts[8] = {0,0,0,0,0,0,0,0};
+  for (int i = 0; i < 10000; ++i){
+    valueCounts[randomNode(root)->data]++;
+  }
+
+  for (int i = 0; i < 8; ++i) {
+    cout << i << ": " << valueCounts[i] << endl;
   }
   cout << "---------------------------------------------------------------------------" << endl;
 }
@@ -36,14 +46,15 @@ Node* RandomNode::randomNode(Node* root, int &numNodes) {
     return NULL;
 
   int rand = std::rand() % numNodes;
+  numNodes--;
   if (rand == 0)
     return root;
 
-  Node* leftChosen = randomNode(root->left, --numNodes);
+  Node* leftChosen = randomNode(root->left, numNodes);
   if (leftChosen != NULL)
     return leftChosen;
 
-  Node* rightChosen = randomNode(root->right, --numNodes);
+  Node* rightChosen = randomNode(root->right, numNodes);
   if (rightChosen != NULL)
     return rightChosen;
 
