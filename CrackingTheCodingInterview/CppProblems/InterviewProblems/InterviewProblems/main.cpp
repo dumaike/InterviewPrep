@@ -18,6 +18,7 @@
 #include "bstsequence.h"
 #include "issubtree.h"
 #include "randomnode.h"
+#include "pathswithsum.h"
 
 int main() {
   
@@ -33,7 +34,8 @@ int main() {
     //new graphsandtrees::FirstCommonAncestor();
     //new graphsandtrees::BstSequence();
     //new graphsandtrees::IsSubtree();
-    new graphsandtrees::RandomNode();
+    //new graphsandtrees::RandomNode();
+    new graphsandtrees::PathsWithSum();
 
   testClass->runTestCases();
 

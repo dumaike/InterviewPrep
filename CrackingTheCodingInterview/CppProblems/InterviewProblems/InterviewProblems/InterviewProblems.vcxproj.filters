@@ -105,6 +105,9 @@
     <ClCompile Include="randomnode.cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
+    <ClCompile Include="pathswithsum.cpp">
+      <Filter>Source Files\graphsandtrees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -159,6 +162,9 @@
       <Filter>Header Files\com</Filter>
     </ClInclude>
     <ClInclude Include="randomnode.h">
+      <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="pathswithsum.h">
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
   </ItemGroup>
