@@ -10,7 +10,7 @@ namespace graphsandtrees{
   class PathsWithSum: public com::TestableProblem {
 
     int pathsWithSum(com::binarytree::Node* root, int sum);
-    int pathsWithSum(com::binarytree::Node* root, int sum, int progress);
+    int pathsWithSum(com::binarytree::Node* root, int sum, int progress, bool mainPath);
 
     void singleTest(com::binarytree::Node* root, int sum);
 

@@ -16,7 +16,7 @@ void PathsWithSum::runTestCases(){
 void PathsWithSum::singleTest(Node* root, int sum){
   cout << "The following tree has " << pathsWithSum(root, sum) << " that sum to " << sum << endl;
   cout << com::DataStructureUtils::toString(root);
-  cout << "----------------------------------------------------------------------------------" << endl;
+  cout << "-------------------------------------------------------------------------------" << endl;
 }
 
 //*-----------------------------------------------------------------------------------------*/
@@ -26,10 +26,10 @@ void PathsWithSum::singleTest(Node* root, int sum){
 // a production environment.
 //*-----------------------------------------------------------------------------------------*/
 int PathsWithSum::pathsWithSum(Node* root, int sum) {
-    return pathsWithSum(root, sum, 0);
+    return pathsWithSum(root, sum, 0, true);
 }
 
-int PathsWithSum::pathsWithSum(Node* root, int sum, int progress) {
+int PathsWithSum::pathsWithSum(Node* root, int sum, int progress, bool mainPath) {
   if (root == NULL)
     return 0;
 
@@ -37,10 +37,13 @@ int PathsWithSum::pathsWithSum(Node* root, int sum, int progress) {
   int progressToHere = root->data + progress;
   if (progressToHere == sum)
     sumFound = 1;
-
-  return pathsWithSum(root->left, sum, progressToHere) + 
-         pathsWithSum(root->right, sum, progressToHere) + 
-         pathsWithSum(root->left, sum, root->data) + 
-         pathsWithSum(root->right, sum, root->data) + 
+  
+  int leftProgress = pathsWithSum(root->left, sum, progressToHere, mainPath);
+  int leftRestart = (mainPath ? pathsWithSum(root->left, sum, 0, false) : 0);
+  int rightProgress = pathsWithSum(root->right, sum, progressToHere, mainPath);
+  int rightRestart = (mainPath ? pathsWithSum(root->right, sum, 0, false) : 0);
+  int returnPaths = leftProgress + leftRestart +
+         rightProgress + rightRestart +
          sumFound;
+  return returnPaths;
 }

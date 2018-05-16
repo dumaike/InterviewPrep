@@ -82,10 +82,10 @@ binarytree::Node* DataStructureUtils::createTree3() {
   binarytree::Node* n2 = new binarytree::Node(2);
   binarytree::Node* n3 = new binarytree::Node(3);
   binarytree::Node* n4 = new binarytree::Node(4);
+  binarytree::Node* n5 = new binarytree::Node(5);
 
   root->setLeftChild(n1);
   n1->setLeftChild(n2);
-  n2->setLeftChild(n3);
   n2->setLeftChild(n4);
 
   return root;
