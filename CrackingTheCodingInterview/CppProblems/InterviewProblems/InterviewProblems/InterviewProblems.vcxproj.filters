@@ -49,6 +49,12 @@
     <Filter Include="Header Files\com\linkedlist">
       <UniqueIdentifier>{4b0ff36d-244b-4717-ab44-eb06fbc78678}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\bitmanipulation">
+      <UniqueIdentifier>{b0b8e453-4689-45b8-9ff0-83608ce7bb11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bitmanipulation">
+      <UniqueIdentifier>{a9af4474-cdd1-4d22-9c0d-133d04ffe360}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -108,6 +114,9 @@
     <ClCompile Include="pathswithsum.cpp">
       <Filter>Source Files\graphsandtrees</Filter>
     </ClCompile>
+    <ClCompile Include="insertion.cpp">
+      <Filter>Source Files\bitmanipulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -166,6 +175,9 @@
     </ClInclude>
     <ClInclude Include="pathswithsum.h">
       <Filter>Header Files\graphsandtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="insertion.h">
+      <Filter>Header Files\bitmanipulation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -6,7 +6,10 @@
 //to modify the header guard in new problems
 #include "exampleproblemtemplate.h"
 
+//Language
 #include "printklastlines.h"
+
+//Graphs and Trees
 #include "routebetweennodes.h"
 #include "minimaltree.h"
 #include "listofdepths.h"
@@ -19,6 +22,9 @@
 #include "issubtree.h"
 #include "randomnode.h"
 #include "pathswithsum.h"
+
+//Bit Manipulation
+#include "insertion.h"
 
 int main() {
   
@@ -35,7 +41,8 @@ int main() {
     //new graphsandtrees::BstSequence();
     //new graphsandtrees::IsSubtree();
     //new graphsandtrees::RandomNode();
-    new graphsandtrees::PathsWithSum();
+    //new graphsandtrees::PathsWithSum();
+    new bitmanipulation::Insertion();
 
   testClass->runTestCases();
 

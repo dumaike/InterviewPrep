@@ -26,6 +26,7 @@
     <ClCompile Include="exampleproblemtemplate.cpp" />
     <ClCompile Include="firstcommonancestor.cpp" />
     <ClCompile Include="graphnode.cpp" />
+    <ClCompile Include="insertion.cpp" />
     <ClCompile Include="isbalanced.cpp" />
     <ClCompile Include="issubtree.cpp" />
     <ClCompile Include="linkedlistnode.cpp" />
@@ -47,6 +48,7 @@
     <ClInclude Include="exampleproblemtemplate.h" />
     <ClInclude Include="firstcommonancestor.h" />
     <ClInclude Include="graphnode.h" />
+    <ClInclude Include="insertion.h" />
     <ClInclude Include="isbalanced.h" />
     <ClInclude Include="issubtree.h" />
     <ClInclude Include="linkedlistnode.h" />
