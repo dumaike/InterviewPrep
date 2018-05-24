@@ -25,7 +25,7 @@ void BinaryToString::singleTest(double input){
 string BinaryToString::binaryToString(double binary){
   double intPart;
   while (std::modf(binary, &intPart) != 0){
-    binary *= 10;
+    binary *= 10; 
   }
 
   if (binary > INT_MAX) {

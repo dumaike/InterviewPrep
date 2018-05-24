@@ -120,6 +120,9 @@
     <ClCompile Include="binarytostring.cpp">
       <Filter>Source Files\bitmanipulation</Filter>
     </ClCompile>
+    <ClCompile Include="flipbittowin.cpp">
+      <Filter>Source Files\bitmanipulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -183,6 +186,9 @@
       <Filter>Header Files\bitmanipulation</Filter>
     </ClInclude>
     <ClInclude Include="binarytostring.h">
+      <Filter>Header Files\bitmanipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="flipbittowin.h">
       <Filter>Header Files\bitmanipulation</Filter>
     </ClInclude>
   </ItemGroup>

@@ -26,6 +26,7 @@
     <ClCompile Include="datastructureutils.cpp" />
     <ClCompile Include="exampleproblemtemplate.cpp" />
     <ClCompile Include="firstcommonancestor.cpp" />
+    <ClCompile Include="flipbittowin.cpp" />
     <ClCompile Include="graphnode.cpp" />
     <ClCompile Include="insertion.cpp" />
     <ClCompile Include="isbalanced.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="datastructureutils.h" />
     <ClInclude Include="exampleproblemtemplate.h" />
     <ClInclude Include="firstcommonancestor.h" />
+    <ClInclude Include="flipbittowin.h" />
     <ClInclude Include="graphnode.h" />
     <ClInclude Include="insertion.h" />
     <ClInclude Include="isbalanced.h" />

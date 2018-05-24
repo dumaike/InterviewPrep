@@ -26,6 +26,7 @@
 //Bit Manipulation
 #include "insertion.h"
 #include "binarytostring.h"
+#include "flipbittowin.h"
 
 int main() {
   
@@ -46,7 +47,8 @@ int main() {
 
     //BIT MANIPULATION
     //new bitmanipulation::Insertion();
-    new bitmanipulation::BinaryToString();
+    //new bitmanipulation::BinaryToString();
+    new bitmanipulation::FlipBitToWin();
 
   testClass->runTestCases();
 
