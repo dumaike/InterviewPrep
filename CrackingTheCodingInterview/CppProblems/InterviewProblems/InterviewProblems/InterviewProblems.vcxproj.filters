@@ -117,6 +117,9 @@
     <ClCompile Include="insertion.cpp">
       <Filter>Source Files\bitmanipulation</Filter>
     </ClCompile>
+    <ClCompile Include="binarytostring.cpp">
+      <Filter>Source Files\bitmanipulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -177,6 +180,9 @@
       <Filter>Header Files\graphsandtrees</Filter>
     </ClInclude>
     <ClInclude Include="insertion.h">
+      <Filter>Header Files\bitmanipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="binarytostring.h">
       <Filter>Header Files\bitmanipulation</Filter>
     </ClInclude>
   </ItemGroup>

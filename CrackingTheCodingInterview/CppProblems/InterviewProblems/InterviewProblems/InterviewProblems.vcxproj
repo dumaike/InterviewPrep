@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="binarytostring.cpp" />
     <ClCompile Include="binarytreenode.cpp" />
     <ClCompile Include="bstsequence.cpp" />
     <ClCompile Include="buildorder.cpp" />
@@ -41,6 +42,7 @@
     <ClCompile Include="validatebst.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binarytostring.h" />
     <ClInclude Include="binarytreenode.h" />
     <ClInclude Include="bstsequence.h" />
     <ClInclude Include="buildorder.h" />

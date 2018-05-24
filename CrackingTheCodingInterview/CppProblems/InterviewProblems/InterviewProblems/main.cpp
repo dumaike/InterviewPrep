@@ -25,6 +25,7 @@
 
 //Bit Manipulation
 #include "insertion.h"
+#include "binarytostring.h"
 
 int main() {
   
@@ -42,7 +43,10 @@ int main() {
     //new graphsandtrees::IsSubtree();
     //new graphsandtrees::RandomNode();
     //new graphsandtrees::PathsWithSum();
-    new bitmanipulation::Insertion();
+
+    //BIT MANIPULATION
+    //new bitmanipulation::Insertion();
+    new bitmanipulation::BinaryToString();
 
   testClass->runTestCases();
 
