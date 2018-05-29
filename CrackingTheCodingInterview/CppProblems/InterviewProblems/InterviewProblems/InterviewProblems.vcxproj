@@ -35,6 +35,7 @@
     <ClCompile Include="listofdepths.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="minimaltree.cpp" />
+    <ClCompile Include="nextnumber.cpp" />
     <ClCompile Include="pathswithsum.cpp" />
     <ClCompile Include="randomnode.cpp" />
     <ClCompile Include="routebetweennodes .cpp" />
@@ -58,6 +59,7 @@
     <ClInclude Include="linkedlistnode.h" />
     <ClInclude Include="listofdepths.h" />
     <ClInclude Include="minimaltree.h" />
+    <ClInclude Include="nextnumber.h" />
     <ClInclude Include="pathswithsum.h" />
     <ClInclude Include="printklastlines.h" />
     <ClInclude Include="randomnode.h" />

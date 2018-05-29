@@ -123,6 +123,9 @@
     <ClCompile Include="flipbittowin.cpp">
       <Filter>Source Files\bitmanipulation</Filter>
     </ClCompile>
+    <ClCompile Include="nextnumber.cpp">
+      <Filter>Source Files\bitmanipulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -189,6 +192,9 @@
       <Filter>Header Files\bitmanipulation</Filter>
     </ClInclude>
     <ClInclude Include="flipbittowin.h">
+      <Filter>Header Files\bitmanipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="nextnumber.h">
       <Filter>Header Files\bitmanipulation</Filter>
     </ClInclude>
   </ItemGroup>

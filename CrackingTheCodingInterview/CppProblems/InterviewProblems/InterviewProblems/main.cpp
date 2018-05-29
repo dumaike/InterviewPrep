@@ -27,6 +27,7 @@
 #include "insertion.h"
 #include "binarytostring.h"
 #include "flipbittowin.h"
+#include "nextnumber.h"
 
 int main() {
   
@@ -48,7 +49,8 @@ int main() {
     //BIT MANIPULATION
     //new bitmanipulation::Insertion();
     //new bitmanipulation::BinaryToString();
-    new bitmanipulation::FlipBitToWin();
+    //new bitmanipulation::FlipBitToWin();
+    new bitmanipulation::NextNumber();
 
   testClass->runTestCases();
 
