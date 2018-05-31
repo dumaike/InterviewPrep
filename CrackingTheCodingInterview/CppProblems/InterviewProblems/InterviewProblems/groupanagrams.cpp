@@ -16,7 +16,7 @@ void GroupAnagrams::runTestCases(){
 
 void GroupAnagrams::singleTest(vector<string> &inputArray){
   cout << "Unsorted: " << com::DataStructureUtils::toString(inputArray) << endl;
-  groupAnagrams(inputArray);
+  groupPalindromes(inputArray);
   cout << "Sorted: " << com::DataStructureUtils::toString(inputArray)<< endl;
   cout << "-------------------------------------------------------------" << endl;
 }
@@ -27,7 +27,7 @@ void GroupAnagrams::singleTest(vector<string> &inputArray){
 // Uses some techniques for the sake of time savings and brevity that I wouldn't endorse in 
 // a production environment.
 //*-----------------------------------------------------------------------------------------*/
-void GroupAnagrams::groupAnagrams(vector<string> &inputArray){
+void GroupAnagrams::groupPalindromes(vector<string> &inputArray){
   unordered_map<string, string> anagramMap = unordered_map<string, string>();
 
   //Assuming no duplicates

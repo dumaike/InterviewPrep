@@ -32,6 +32,7 @@
 //Sorting and Searching
 #include "sortedmerge.h"
 #include "groupanagrams.h"
+#include "searchinrotatedarray.h"
 
 int main() {
   
@@ -58,7 +59,8 @@ int main() {
 
     //SORTINGANDSEARCHING
     //new sortingandsearching::SortedMerge();
-    new sortingandsearching::GroupAnagrams();
+    //new sortingandsearching::GroupAnagrams();
+    new sortingandsearching::SearchInRotatedArray();
 
   testClass->runTestCases();
 

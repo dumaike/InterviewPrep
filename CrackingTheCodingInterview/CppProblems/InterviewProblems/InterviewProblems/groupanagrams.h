@@ -12,7 +12,7 @@ namespace sortingandsearching{
 
     string GroupAnagrams::getAnagram(string input);
 
-    void groupAnagrams(vector<string> &inputArray);
+    void groupPalindromes(vector<string> &inputArray);
 
     void singleTest(vector<string> &inputArray);
 

@@ -40,6 +40,7 @@
     <ClCompile Include="pathswithsum.cpp" />
     <ClCompile Include="randomnode.cpp" />
     <ClCompile Include="routebetweennodes .cpp" />
+    <ClCompile Include="searchinrotatedarray.cpp" />
     <ClCompile Include="sortedmerge.cpp" />
     <ClCompile Include="successor.cpp" />
     <ClCompile Include="testableproblem.cpp" />
@@ -67,6 +68,7 @@
     <ClInclude Include="printklastlines.h" />
     <ClInclude Include="randomnode.h" />
     <ClInclude Include="routebetweennodes.h" />
+    <ClInclude Include="searchinrotatedarray.h" />
     <ClInclude Include="sortedmerge.h" />
     <ClInclude Include="successor.h" />
     <ClInclude Include="testableproblem.h" />
