@@ -29,6 +29,9 @@
 #include "flipbittowin.h"
 #include "nextnumber.h"
 
+//Sorting and Searching
+#include "sortedmerge.h"
+
 int main() {
   
   com::TestableProblem* testClass =
@@ -50,7 +53,10 @@ int main() {
     //new bitmanipulation::Insertion();
     //new bitmanipulation::BinaryToString();
     //new bitmanipulation::FlipBitToWin();
-    new bitmanipulation::NextNumber();
+    //new bitmanipulation::NextNumber();
+
+    //SORTINGANDSEARCHING
+    new sortingandsearching::SortedMerge();
 
   testClass->runTestCases();
 

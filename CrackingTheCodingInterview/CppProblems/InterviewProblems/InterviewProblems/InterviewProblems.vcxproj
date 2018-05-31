@@ -39,6 +39,7 @@
     <ClCompile Include="pathswithsum.cpp" />
     <ClCompile Include="randomnode.cpp" />
     <ClCompile Include="routebetweennodes .cpp" />
+    <ClCompile Include="sortedmerge.cpp" />
     <ClCompile Include="successor.cpp" />
     <ClCompile Include="testableproblem.cpp" />
     <ClCompile Include="validatebst.cpp" />
@@ -64,6 +65,7 @@
     <ClInclude Include="printklastlines.h" />
     <ClInclude Include="randomnode.h" />
     <ClInclude Include="routebetweennodes.h" />
+    <ClInclude Include="sortedmerge.h" />
     <ClInclude Include="successor.h" />
     <ClInclude Include="testableproblem.h" />
     <ClInclude Include="validatebst.h" />

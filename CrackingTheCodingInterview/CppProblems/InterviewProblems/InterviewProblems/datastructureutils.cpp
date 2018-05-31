@@ -319,6 +319,21 @@ string com::DataStructureUtils::toString(const vector<int> &values) {
 }
 
 //A simple vector print for data testing
+string com::DataStructureUtils::toString(const int values[], int size) {
+  string returnString = "{";
+
+  for (int i = 0; i < size; ++i) {
+    returnString += to_string(values[i]);
+    if (i < size - 1) {
+      returnString += ", ";
+    }
+  }
+  returnString += "}";
+
+  return returnString;
+}
+
+//A simple vector print for data testing
 string com::DataStructureUtils::toString(const vector<char> &values) {
   string returnString = "{";
 

@@ -55,6 +55,12 @@
     <Filter Include="Header Files\bitmanipulation">
       <UniqueIdentifier>{a9af4474-cdd1-4d22-9c0d-133d04ffe360}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\sortingandsearching">
+      <UniqueIdentifier>{b156a8a1-ddeb-4944-a139-711fa1ea1474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sortingandsearching">
+      <UniqueIdentifier>{e87569de-3a90-404d-bfaa-129e9b14f343}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -126,6 +132,9 @@
     <ClCompile Include="nextnumber.cpp">
       <Filter>Source Files\bitmanipulation</Filter>
     </ClCompile>
+    <ClCompile Include="sortedmerge.cpp">
+      <Filter>Source Files\sortingandsearching</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -196,6 +205,9 @@
     </ClInclude>
     <ClInclude Include="nextnumber.h">
       <Filter>Header Files\bitmanipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="sortedmerge.h">
+      <Filter>Header Files\sortingandsearching</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

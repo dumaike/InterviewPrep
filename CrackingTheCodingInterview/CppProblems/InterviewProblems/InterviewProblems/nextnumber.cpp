@@ -12,6 +12,8 @@ void NextNumber::runTestCases(){
   singleTest(0b101);
   singleTest(0b11011);
   singleTest(0b00100);
+  //Fail case
+  singleTest(0b001111100);
 }
 
 void NextNumber::singleTest(int input){
