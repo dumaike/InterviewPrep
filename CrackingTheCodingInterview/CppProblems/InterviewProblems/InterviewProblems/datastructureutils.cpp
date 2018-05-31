@@ -318,13 +318,28 @@ string com::DataStructureUtils::toString(const vector<int> &values) {
   return returnString;
 }
 
-//A simple vector print for data testing
+//A simple array print for data testing
 string com::DataStructureUtils::toString(const int values[], int size) {
   string returnString = "{";
 
   for (int i = 0; i < size; ++i) {
     returnString += to_string(values[i]);
     if (i < size - 1) {
+      returnString += ", ";
+    }
+  }
+  returnString += "}";
+
+  return returnString;
+}
+
+//A simple array print for data testing
+string com::DataStructureUtils::toString(const vector<string> &values) {
+  string returnString = "{";
+
+  for (int i = 0; i < values.size(); ++i) {
+    returnString += values[i];
+    if (i < values.size() - 1) {
       returnString += ", ";
     }
   }

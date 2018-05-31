@@ -190,6 +190,7 @@ namespace com {
 
       static string toString(const vector<int> &values);
       static string toString(const vector<char> &values);
+      static string toString(const vector<string> &values);
       static string toString(const int values[], int size);
       static string toString(binarytree::Node* root);
   };

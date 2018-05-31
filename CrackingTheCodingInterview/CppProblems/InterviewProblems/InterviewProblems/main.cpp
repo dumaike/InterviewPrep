@@ -31,6 +31,7 @@
 
 //Sorting and Searching
 #include "sortedmerge.h"
+#include "groupanagrams.h"
 
 int main() {
   
@@ -56,7 +57,8 @@ int main() {
     //new bitmanipulation::NextNumber();
 
     //SORTINGANDSEARCHING
-    new sortingandsearching::SortedMerge();
+    //new sortingandsearching::SortedMerge();
+    new sortingandsearching::GroupAnagrams();
 
   testClass->runTestCases();
 

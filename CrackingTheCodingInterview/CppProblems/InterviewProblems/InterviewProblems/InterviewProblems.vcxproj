@@ -28,6 +28,7 @@
     <ClCompile Include="firstcommonancestor.cpp" />
     <ClCompile Include="flipbittowin.cpp" />
     <ClCompile Include="graphnode.cpp" />
+    <ClCompile Include="groupanagrams.cpp" />
     <ClCompile Include="insertion.cpp" />
     <ClCompile Include="isbalanced.cpp" />
     <ClCompile Include="issubtree.cpp" />
@@ -54,6 +55,7 @@
     <ClInclude Include="firstcommonancestor.h" />
     <ClInclude Include="flipbittowin.h" />
     <ClInclude Include="graphnode.h" />
+    <ClInclude Include="groupanagrams.h" />
     <ClInclude Include="insertion.h" />
     <ClInclude Include="isbalanced.h" />
     <ClInclude Include="issubtree.h" />
