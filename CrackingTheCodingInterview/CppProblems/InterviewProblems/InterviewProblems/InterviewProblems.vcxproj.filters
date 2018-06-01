@@ -141,6 +141,9 @@
     <ClCompile Include="searchinrotatedarray.cpp">
       <Filter>Source Files\sortingandsearching</Filter>
     </ClCompile>
+    <ClCompile Include="sparsesearch.cpp">
+      <Filter>Source Files\sortingandsearching</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="testableproblem.h">
@@ -219,6 +222,9 @@
       <Filter>Header Files\sortingandsearching</Filter>
     </ClInclude>
     <ClInclude Include="searchinrotatedarray.h">
+      <Filter>Header Files\sortingandsearching</Filter>
+    </ClInclude>
+    <ClInclude Include="sparsesearch.h">
       <Filter>Header Files\sortingandsearching</Filter>
     </ClInclude>
   </ItemGroup>

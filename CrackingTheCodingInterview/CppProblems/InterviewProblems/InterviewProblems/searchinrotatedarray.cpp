@@ -9,6 +9,7 @@ using namespace sortingandsearching;
 void SearchInRotatedArray::runTestCases(){
   singleTest(vector<int>{}, 0);
   singleTest(vector<int>{15, 16, 19, 20, 25, 1, 3, 4, 5 ,7, 10, 14}, 5);
+  singleTest(vector<int>{2, 2, 2, 2, 2, 2}, 2);
 }
 
 void SearchInRotatedArray::singleTest(const vector<int> &values, int find){
