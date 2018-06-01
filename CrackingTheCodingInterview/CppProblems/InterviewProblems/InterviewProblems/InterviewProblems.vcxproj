@@ -25,6 +25,7 @@
     <ClCompile Include="buildorder.cpp" />
     <ClCompile Include="datastructureutils.cpp" />
     <ClCompile Include="exampleproblemtemplate.cpp" />
+    <ClCompile Include="findduplicates.cpp" />
     <ClCompile Include="firstcommonancestor.cpp" />
     <ClCompile Include="flipbittowin.cpp" />
     <ClCompile Include="graphnode.cpp" />
@@ -54,6 +55,7 @@
     <ClInclude Include="buildorder.h" />
     <ClInclude Include="datastructureutils.h" />
     <ClInclude Include="exampleproblemtemplate.h" />
+    <ClInclude Include="findduplicates.h" />
     <ClInclude Include="firstcommonancestor.h" />
     <ClInclude Include="flipbittowin.h" />
     <ClInclude Include="graphnode.h" />

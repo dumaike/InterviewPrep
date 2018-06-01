@@ -34,6 +34,7 @@
 #include "groupanagrams.h"
 #include "searchinrotatedarray.h"
 #include "sparsesearch.h"
+#include "findduplicates.h"
 
 int main() {
   
@@ -62,7 +63,8 @@ int main() {
     //new sortingandsearching::SortedMerge();
     //new sortingandsearching::GroupAnagrams();
     //new sortingandsearching::SearchInRotatedArray();
-    new sortingandsearching::SparseSearch();
+    //new sortingandsearching::SparseSearch();
+    new sortingandsearching::FindDuplicates();
 
   testClass->runTestCases();
 
