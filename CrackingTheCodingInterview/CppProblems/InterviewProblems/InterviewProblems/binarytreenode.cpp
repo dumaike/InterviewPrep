@@ -17,6 +17,10 @@ Node::Node(int nodeData) {
 }
 
 Node::~Node() {
+  if (left != NULL)
+    delete left;
+  if (right != NULL)
+    delete right;
 }
 
 void Node::setLeftChild(Node* node) {

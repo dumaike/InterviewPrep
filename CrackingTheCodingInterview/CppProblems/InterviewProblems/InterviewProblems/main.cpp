@@ -35,6 +35,7 @@
 #include "searchinrotatedarray.h"
 #include "sparsesearch.h"
 #include "findduplicates.h"
+#include "rankfromstream.h"
 
 int main() {
   
@@ -64,7 +65,8 @@ int main() {
     //new sortingandsearching::GroupAnagrams();
     //new sortingandsearching::SearchInRotatedArray();
     //new sortingandsearching::SparseSearch();
-    new sortingandsearching::FindDuplicates();
+    //new sortingandsearching::FindDuplicates();
+    new sortingandsearching::RankFromStream();
 
   testClass->runTestCases();
 

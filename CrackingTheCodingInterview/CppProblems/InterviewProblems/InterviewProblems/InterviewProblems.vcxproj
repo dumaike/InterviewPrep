@@ -40,6 +40,7 @@
     <ClCompile Include="nextnumber.cpp" />
     <ClCompile Include="pathswithsum.cpp" />
     <ClCompile Include="randomnode.cpp" />
+    <ClCompile Include="rankfromstream.cpp" />
     <ClCompile Include="routebetweennodes .cpp" />
     <ClCompile Include="searchinrotatedarray.cpp" />
     <ClCompile Include="sortedmerge.cpp" />
@@ -70,6 +71,7 @@
     <ClInclude Include="pathswithsum.h" />
     <ClInclude Include="printklastlines.h" />
     <ClInclude Include="randomnode.h" />
+    <ClInclude Include="rankfromstream.h" />
     <ClInclude Include="routebetweennodes.h" />
     <ClInclude Include="searchinrotatedarray.h" />
     <ClInclude Include="sortedmerge.h" />
