@@ -36,6 +36,7 @@
 #include "sparsesearch.h"
 #include "findduplicates.h"
 #include "rankfromstream.h"
+#include "peaksandvalleys.h"
 
 int main() {
   
@@ -66,7 +67,8 @@ int main() {
     //new sortingandsearching::SearchInRotatedArray();
     //new sortingandsearching::SparseSearch();
     //new sortingandsearching::FindDuplicates();
-    new sortingandsearching::RankFromStream();
+    //new sortingandsearching::RankFromStream();
+    new sortingandsearching::PeaksAndValleys();
 
   testClass->runTestCases();
 
